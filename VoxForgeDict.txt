@@ -1,0 +1,59 @@
+ADA         [ADA]           aa d aa
+ANTAR       [ANTAR]         aa n t aa r
+APA         [APA]           aa p aa
+APAKAH      [APAKAH]        aa p aa k aa hh
+AYAM        [AYAM]          aa y aa m
+BISA        [BISA]          b ih s aa
+BOLEH       [BOLEH]         b ao l eh hh
+BULAN       [BULAN]         b uw l aa n
+DAN         [DAN]           d aa n
+DARI        [DARI]          d aa r ih
+DELAPAN     [DELAPAN]       d eh l aa p aa n
+DI          [DI]            d ih
+DIA         [DIA]           d ih aa
+DIAMBIL     [DIAMBIL]       d ih aa m b ih l
+DIANTAR     [DIANTAR]       d ih aa n t aa r
+DIBUAT      [DIBUAT]        d ih b uw aa t
+DICAMPUR    [DICAMPUR]      d ih c aa m p uw r
+DIMAKAN     [DIMAKAN]       d ih m aa k aa n
+DUA         [DUA]           d uw w aa
+EMPAT       [EMPAT]         eh m p aa t
+ENAK        [ENAK]          eh n aa k
+ENAM        [ENAM]          eh n aa m
+GORENG      [GORENG]        g ao r eh ng
+GORENGAN    [GORENGAN]      g ao r eh ng aa n
+HALO        [HALO]          h aa l oh
+HARI        [HARI]          h aa r ih
+INGIN       [INGIN]         ih ng ih n
+INI         [INI]           ih n ih
+KALI        [KALI]          k aa l ih
+LIMA        [LIMA]          l ih m aa
+MAKAN       [MAKAN]         m aa k aa n
+MALAM       [MALAM]         m aa l aa m
+MAU         [MAU]           m aa uw
+MEMBATALKAN [MEMBATALKAN]   m eh m b aa t aa l k aa n
+MIE         [MIE]           m ih
+NANTI       [NANTI]         n aa n t ih
+NASI        [NASI]          n aa s ih
+NUGAS       [NUGAS]         n uw g aa s
+PAGI        [PAGI]          p aa g ih
+PERGI       [PERGI]         p eh r g ih
+PESAN       [PESAN]         p eh s aa n
+PESANAN     [PESANAN]       p eh s aa n aa n
+PULANG      [PULANG]        p uw l aa ng
+SAMBIL      [SAMBIL]        s aa m b ih l
+SAMPAI      [SAMPAI]        s aa m p aa ih
+SATU        [SATU]          s aa t uw
+SAYA        [SAYA]          s aa y aa
+SEMBILAN    [SEMBILAN]      s eh m b ih l aa n
+SEPULUH     [SEPULUH]       s eh p uw l uw hh
+SIANG       [SIANG]         s ih y aa ng
+SORE        [SORE]          s ao r eh
+SUKA        [SUKA]          s uw k aa
+SUP         [SUP]           s uw p
+TAHUN       [TAHUN]         t aa hh uw n
+TIGA        [TIGA]          t ih g aa
+TUJUH       [TUJUH]         t uw j uw hh
+UNTUK       [UNTUK]         uw n t uw k
+WARUNG      [WARUNG]        w aa r uw ng
+YANG        [YANG]          y aa ng

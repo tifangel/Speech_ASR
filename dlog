@@ -1,0 +1,43 @@
+WARNING: no script file ./VoxForgeDict.txt.ded
+Missing Words
+-------------
+SENT-END
+SENT-START
+
+Dictionary Usage Statistics
+---------------------------
+  Dictionary    TotalWords WordsUsed  TotalProns PronsUsed
+VoxForgeDict        59         59         59         59
+        dict        59         59         59         59
+
+61 words required, 2 missing
+
+New Phone Usage Counts
+---------------------
+  1. aa    :    63
+  2. d     :    12
+  3. sp    :    59
+  4. n     :    23
+  5. t     :    11
+  6. r     :    10
+  7. p     :    13
+  8. k     :     8
+  9. hh    :     5
+ 10. y     :     4
+ 11. m     :    17
+ 12. b     :     8
+ 13. ih    :    27
+ 14. s     :    15
+ 15. ao    :     4
+ 16. l     :    13
+ 17. eh    :    14
+ 18. uw    :    18
+ 19. c     :     1
+ 20. w     :     2
+ 21. g     :     6
+ 22. ng    :     7
+ 23. h     :     2
+ 24. oh    :     1
+ 25. j     :     1
+
+Dictionary dict created
