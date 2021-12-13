@@ -1,0 +1,881 @@
+STAT: jconf successfully finalized
+STAT: *** loading AM00 _default
+Stat: init_phmm: Reading in HMM definition
+Stat: rdhmmdef: ascii format HMM definition
+Stat: rdhmmdef: limit check passed
+Stat: check_hmm_restriction: an HMM with several arcs from initial state found: "sp"
+Stat: rdhmmdef: this HMM requires multipath handling at decoding
+Stat: rdhmmdef: no <SID> embedded
+Stat: rdhmmdef: assign SID by the order of appearance
+Stat: init_phmm: defined HMMs:    36
+Stat: init_phmm: loading ascii hmmlist
+Stat: init_phmm: logical names:   233 in HMMList
+Stat: init_phmm: base phones:    26 used in logical
+Stat: init_phmm: finished reading HMM definitions
+STAT: m_fusion: force multipath HMM handling by user request
+STAT: making pseudo bi/mono-phone for IW-triphone
+Stat: hmm_lookup: 114 pseudo phones are added to logical HMM list
+STAT: *** AM00 _default loaded
+STAT: *** loading LM00 _default
+STAT: reading [sample.dfa] and [sample.dict]...
+Stat: init_voca: read 26 words
+STAT: done
+STAT: Gram #0 sample registered
+STAT: Gram #0 sample: new grammar loaded, now mash it up for recognition
+STAT: Gram #0 sample: extracting category-pair constraint for the 1st pass
+STAT: Gram #0 sample: installed
+STAT: Gram #0 sample: turn on active
+STAT: grammar update completed
+STAT: *** LM00 _default loaded
+STAT: ------
+STAT: All models are ready, go for final fusion
+STAT: [1] create MFCC extraction instance(s)
+STAT: *** create MFCC calculation modules from AM
+STAT: AM 0 _default: create a new module MFCC01
+STAT: 1 MFCC modules created
+STAT: [2] create recognition processing instance(s) with AM and LM
+STAT: composing recognizer instance SR00 _default (AM00 _default, LM00 _default)
+STAT: Building HMM lexicon tree
+STAT: lexicon size: 424 nodes
+STAT: coordination check passed
+STAT: multi-gram: beam width set to 200 (guess) by lexicon change
+STAT: wchmm (re)build completed
+STAT: SR00 _default composed
+STAT: [3] initialize for acoustic HMM calculation
+Stat: outprob_init: state-level mixture PDFs, use calc_mix()
+Stat: addlog: generating addlog table (size = 1953 kB)
+Stat: addlog: addlog table generated
+STAT: [4] prepare MFCC storage(s)
+STAT: [5] prepare for real-time decoding
+STAT: All init successfully done
+
+STAT: ###### initialize input device
+----------------------- System Information begin ---------------------
+JuliusLib rev.4.3.1 (fast)
+
+Engine specification:
+ -  Base setup   : fast
+ -  Supported LM : DFA, N-gram, Word
+ -  Extension    : NoPThread
+ -  Compiled by  : i686-w64-mingw32-gcc -O6 -fomit-frame-pointer
+
+------------------------------------------------------------
+Configuration of Modules
+
+ Number of defined modules: AM=1, LM=1, SR=1
+
+ Acoustic Model (with input parameter spec.):
+ - AM00 "_default"
+	hmmfilename=hmm15/hmmdefs
+	hmmmapfilename=tiedlist
+
+ Language Model:
+ - LM00 "_default"
+	grammar #1:
+	    dfa  = sample.dfa
+	    dict = sample.dict
+
+ Recognizer:
+ - SR00 "_default" (AM00, LM00)
+
+------------------------------------------------------------
+Speech Analysis Module(s)
+
+[MFCC01]  for [AM00 _default]
+
+ Acoustic analysis condition:
+	       parameter = MFCC_0_D_N_Z (25 dim. from 12 cepstrum + c0, abs energy supressed with CMN)
+	sample frequency = 16000 Hz
+	   sample period =  625  (1 = 100ns)
+	     window size =  400 samples (25.0 ms)
+	     frame shift =  160 samples (10.0 ms)
+	    pre-emphasis = 0.97
+	    # filterbank = 24
+	   cepst. lifter = 22
+	      raw energy = False
+	energy normalize = False
+	    delta window = 2 frames (20.0 ms) around
+	     hi freq cut = OFF
+	     lo freq cut = OFF
+	 zero mean frame = OFF
+	       use power = OFF
+	             CVN = OFF
+	            VTLN = OFF
+
+    spectral subtraction = off
+
+ cep. mean normalization = yes, real-time MAP-CMN, updating mean with last 0.0 sec. input
+  initial mean from file = N/A
+   beginning data weight = 100.00
+ cep. var. normalization = no
+
+	 base setup from = Julius defaults
+
+------------------------------------------------------------
+Acoustic Model(s)
+
+[AM00 "_default"]
+
+ HMM Info:
+    36 models, 85 states, 85 mpdfs, 85 Gaussians are defined
+	      model type = context dependency handling ON
+      training parameter = MFCC_N_D_Z_0
+	   vector length = 25
+	number of stream = 1
+	     stream info = [0-24]
+	cov. matrix type = DIAGC
+	   duration type = NULLD
+	max mixture size = 1 Gaussians
+     max length of model = 5 states
+     logical base phones = 26
+       model skip trans. = exist, require multi-path handling
+      skippable models = sp (1 model(s))
+
+ AM Parameters:
+        Gaussian pruning = safe  (-gprune)
+  top N mixtures to calc = 2 / 0  (-tmix)
+    short pause HMM name = "sp" specified, "sp" applied (physical)  (-sp)
+  cross-word CD on pass1 = handle by approx. (use max. prob. of same LC)
+   sp transition penalty = -70.0
+
+------------------------------------------------------------
+Language Model(s)
+
+[LM00 "_default"] type=grammar
+
+ DFA grammar info:
+      13 nodes, 16 arcs, 8 terminal(category) symbols
+      category-pair matrix: 52 bytes (896 bytes allocated)
+
+ Vocabulary Info:
+        vocabulary size  = 26 words, 119 models
+        average word len = 4.6 models, 13.7 states
+       maximum state num = 24 nodes per word
+       transparent words = not exist
+       words under class = not exist
+
+ Parameters:
+   found sp category IDs =
+
+------------------------------------------------------------
+Recognizer(s)
+
+[SR00 "_default"]  AM00 "_default"  +  LM00 "_default"
+
+ Lexicon tree:
+	 total node num =    424
+	  root node num =     24
+	  leaf node num =     26
+
+	(-penalty1) IW penalty1 = +5.0
+	(-penalty2) IW penalty2 = +20.0
+	(-cmalpha)CM alpha coef = 0.050000
+
+	 inter-word short pause = on (append "sp" for each word tail)
+	  sp transition penalty = -70.0
+ Search parameters: 
+	    multi-path handling = yes, multi-path mode enabled
+	(-b) trellis beam width = 200 (-1 or not specified - guessed)
+	(-bs)score pruning thres= disabled
+	(-n)search candidate num= 1
+	(-s)  search stack size = 500
+	(-m)    search overflow = after 2000 hypothesis poped
+	        2nd pass method = searching sentence, generating N-best
+	(-b2)  pass2 beam width = 200
+	(-lookuprange)lookup range= 5  (tm-5 <= t <tm+5)
+	(-sb)2nd scan beamthres = 200.0 (in logscore)
+	(-n)        search till = 1 candidates found
+	(-output)    and output = 1 candidates out of above
+	 IWCD handling:
+	   1st pass: approximation (use max. prob. of same LC)
+	   2nd pass: loose (apply when hypo. is popped and scanned)
+	 all possible words will be expanded in 2nd pass
+	 build_wchmm2() used
+	 lcdset limited by word-pair constraint
+	short pause segmentation = off
+	fall back on search fail = off, returns search failure
+
+------------------------------------------------------------
+Decoding algorithm:
+
+	1st pass input processing = real time, on-the-fly
+	1st pass method = 1-best approx. generating indexed trellis
+	output word confidence measure based on search-time scores
+
+------------------------------------------------------------
+FrontEnd:
+
+ Input stream:
+	             input type = waveform
+	           input source = microphone
+	    device API          = default
+	          sampling freq. = 16000 Hz
+	         threaded A/D-in = not supported (live input may be dropped)
+	   zero frames stripping = on
+	         silence cutting = on
+	             level thres = 4000 / 32767
+	         zerocross thres = 60 / sec.
+	             head margin = 300 msec.
+	             tail margin = 400 msec.
+	              chunk size = 1000 samples
+	    long-term DC removal = off
+	    long-term DC removal = off
+	    level scaling factor = 1.00 (disabled)
+	      reject short input = off
+	      reject  long input = off
+
+----------------------- System Information end -----------------------
+
+Notice for feature extraction (01),
+	*************************************************************
+	* Cepstral mean normalization for real-time decoding:       *
+	* NOTICE: The first input may not be recognized, since      *
+	*         no initial mean is available on startup.          *
+	*************************************************************
+Stat: adin_portaudio: audio cycle buffer length = 256000 bytes
+Stat: adin_portaudio: sound capture devices:
+  1 [MME: Microsoft Sound Mapper - Input]
+  2 [MME: Microphone (Realtek(R) Audio)]
+  3 [MME: Microphone Array (AMD Audio Dev]
+  7 [Windows DirectSound: Primary Sound Capture Driver]
+  8 [Windows DirectSound: Microphone (Realtek(R) Audio)]
+  9 [Windows DirectSound: Microphone Array (AMD Audio Device)]
+Stat: adin_portaudio: APIs: DirectSound MME
+Stat: adin_portaudio: -- DirectSound selected
+Stat: adin_portaudio: [Windows DirectSound: Primary Sound Capture Driver]
+Stat: adin_portaudio: (you can specify device by "PORTAUDIO_DEV_NUM=number"
+Stat: adin_portaudio: try to set default low latency from portaudio: 0 msec
+Stat: adin_portaudio: latency was set to 0.000000 msec
+Warning: strip: sample 35-53 has zero value, stripped
+Warning: strip: sample 227-247 has zero value, stripped
+Warning: strip: sample 16-32 has zero value, stripped
+Warning: strip: sample 37-52 has zero value, stripped
+Warning: strip: sample 84-99 has zero value, stripped
+Warning: strip: sample 450-467 has zero value, stripped
+Warning: strip: sample 201-222 has zero value, stripped
+Warning: strip: sample 416-432 has zero value, stripped
+Warning: strip: sample 87-103 has zero value, stripped
+Warning: strip: sample 110-129 has zero value, stripped
+Warning: strip: sample 248-265 has zero value, stripped
+Warning: strip: sample 259-277 has zero value, stripped
+Warning: strip: sample 291-312 has zero value, stripped
+Warning: strip: sample 344-360 has zero value, stripped
+Warning: strip: sample 272-288 has zero value, stripped
+Warning: strip: sample 421-439 has zero value, stripped
+Warning: strip: sample 339-359 has zero value, stripped
+Warning: strip: sample 29-47 has zero value, stripped
+Warning: strip: sample 49-64 has zero value, stripped
+Warning: strip: sample 404-419 is invalid, stripped
+Warning: strip: sample 429-447 has zero value, stripped
+Warning: strip: sample 176-193 has zero value, stripped
+Warning: strip: sample 231-247 has zero value, stripped
+Warning: strip: sample 262-277 has zero value, stripped
+Warning: strip: sample 181-203 has zero value, stripped
+Warning: strip: sample 168-189 has zero value, stripped
+Warning: strip: sample 415-436 has zero value, stripped
+Warning: strip: sample 118-142 has zero value, stripped
+Warning: strip: sample 277-303 has zero value, stripped
+Warning: strip: sample 352-370 has zero value, stripped
+Warning: strip: sample 289-315 has zero value, stripped
+Warning: strip: sample 49-70 has zero value, stripped
+Warning: strip: sample 346-361 has zero value, stripped
+Warning: strip: sample 184-203 has zero value, stripped
+Warning: strip: sample 378-394 has zero value, stripped
+Warning: strip: sample 156-174 has zero value, stripped
+Warning: strip: sample 199-217 has zero value, stripped
+Warning: strip: sample 264-279 has zero value, stripped
+Warning: strip: sample 32-55 has zero value, stripped
+Warning: strip: sample 57-77 has zero value, stripped
+Warning: strip: sample 341-356 has zero value, stripped
+Warning: strip: sample 170-192 has zero value, stripped
+Warning: strip: sample 120-136 has zero value, stripped
+Warning: strip: sample 319-336 has zero value, stripped
+Warning: strip: sample 305-326 has zero value, stripped
+Warning: strip: sample 440-459 has zero value, stripped
+Warning: strip: sample 214-230 has zero value, stripped
+Warning: strip: sample 393-410 has zero value, stripped
+Warning: strip: sample 457-473 has zero value, stripped
+Warning: strip: sample 188-207 has zero value, stripped
+Warning: strip: sample 332-349 has zero value, stripped
+Warning: strip: sample 7-28 has zero value, stripped
+Warning: strip: sample 210-234 has zero value, stripped
+Warning: strip: sample 444-459 has zero value, stripped
+Warning: strip: sample 252-269 has zero value, stripped
+Warning: strip: sample 310-327 has zero value, stripped
+Warning: strip: sample 53-75 has zero value, stripped
+Warning: strip: sample 196-215 has zero value, stripped
+Warning: strip: sample 166-195 has zero value, stripped
+Warning: strip: sample 80-103 has zero value, stripped
+Warning: strip: sample 353-368 has zero value, stripped
+Warning: strip: sample 19-37 has zero value, stripped
+Warning: strip: sample 348-367 has zero value, stripped
+Warning: strip: sample 153-169 has zero value, stripped
+Warning: strip: sample 200-218 has zero value, stripped
+Warning: strip: sample 127-144 has zero value, stripped
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Warning: strip: sample 76-93 has zero value, stripped
+Warning: strip: sample 77-99 has zero value, stripped
+Warning: strip: sample 28-51 has zero value, stripped
+Warning: strip: sample 64-79 has zero value, stripped
+Warning: strip: sample 259-276 has zero value, stripped
+Warning: strip: sample 318-333 has zero value, stripped
+Warning: strip: sample 157-173 has zero value, stripped
+Warning: strip: sample 181-198 has zero value, stripped
+Warning: strip: sample 112-128 has zero value, stripped
+Warning: strip: sample 161-187 has zero value, stripped
+Warning: strip: sample 7-22 has zero value, stripped
+Warning: strip: sample 308-336 has zero value, stripped
+Warning: strip: sample 68-83 has zero value, stripped
+Warning: strip: sample 115-130 has zero value, stripped
+Warning: strip: sample 258-273 has zero value, stripped
+Warning: strip: sample 154-170 has zero value, stripped
+Warning: strip: sample 424-440 has zero value, stripped
+Warning: strip: sample 57-73 has zero value, stripped
+Warning: strip: sample 96-111 has zero value, stripped
+Warning: strip: sample 180-198 has zero value, stripped
+Warning: strip: sample 377-395 has zero value, stripped
+Warning: strip: sample 21-37 has zero value, stripped
+Warning: strip: sample 148-166 has zero value, stripped
+Warning: strip: sample 60-78 has zero value, stripped
+Warning: strip: sample 148-165 has zero value, stripped
+Warning: strip: sample 443-461 has zero value, stripped
+Warning: strip: sample 313-329 has zero value, stripped
+Warning: strip: sample 72-87 has zero value, stripped
+Warning: strip: sample 144-159 has zero value, stripped
+Warning: strip: sample 277-294 has zero value, stripped
+Warning: strip: sample 72-99 has zero value, stripped
+Warning: strip: sample 144-165 has zero value, stripped
+Warning: strip: sample 397-412 has zero value, stripped
+Warning: strip: sample 328-346 has zero value, stripped
+Warning: strip: sample 459-474 has zero value, stripped
+Warning: strip: sample 324-339 has zero value, stripped
+Warning: strip: sample 445-466 has zero value, stripped
+Warning: strip: sample 396-415 has zero value, stripped
+Warning: strip: sample 18-34 has zero value, stripped
+Warning: strip: sample 85-100 has zero value, stripped
+Warning: strip: sample 351-366 has zero value, stripped
+Warning: strip: sample 52-72 has zero value, stripped
+Warning: strip: sample 74-93 has zero value, stripped
+Warning: strip: sample 333-355 has zero value, stripped
+Warning: strip: sample 84-99 has zero value, stripped
+Warning: strip: sample 358-375 has zero value, stripped
+Warning: strip: sample 77-96 has zero value, stripped
+Warning: strip: sample 264-279 has zero value, stripped
+Warning: strip: sample 343-358 has zero value, stripped
+Warning: strip: sample 148-164 has zero value, stripped
+Warning: strip: sample 45-62 has zero value, stripped
+Warning: strip: sample 344-364 has zero value, stripped
+Warning: strip: sample 347-362 has zero value, stripped
+Warning: strip: sample 15-33 has zero value, stripped
+Warning: strip: sample 329-355 has zero value, stripped
+Warning: strip: sample 420-437 has zero value, stripped
+Warning: strip: sample 29-44 has zero value, stripped
+Warning: strip: sample 105-121 has zero value, stripped
+Warning: strip: sample 88-105 has zero value, stripped
+Warning: strip: sample 428-444 has zero value, stripped
+Warning: strip: sample 157-174 has zero value, stripped
+Warning: strip: sample 395-417 has zero value, stripped
+Warning: strip: sample 320-342 has zero value, stripped
+Warning: strip: sample 357-372 has zero value, stripped
+Warning: strip: sample 0-15 has zero value, stripped
+Warning: strip: sample 303-320 has zero value, stripped
+Warning: strip: sample 352-368 has zero value, stripped
+Warning: strip: sample 159-178 has zero value, stripped
+Warning: strip: sample 195-210 has zero value, stripped
+Warning: strip: sample 42-58 has zero value, stripped
+Warning: strip: sample 161-179 has zero value, stripped
+Warning: strip: sample 202-217 has zero value, stripped
+Warning: strip: sample 432-451 has zero value, stripped
+Warning: strip: sample 30-45 has zero value, stripped
+Warning: strip: sample 171-192 has zero value, stripped
+Warning: strip: sample 141-156 has zero value, stripped
+Warning: strip: sample 188-203 has zero value, stripped
+Warning: strip: sample 54-71 has zero value, stripped
+Warning: strip: sample 393-410 has zero value, stripped
+Warning: strip: sample 3-18 has zero value, stripped
+Warning: strip: sample 420-437 has zero value, stripped
+Warning: strip: sample 457-473 has zero value, stripped
+Warning: strip: sample 193-215 has zero value, stripped
+Warning: strip: sample 180-201 has zero value, stripped
+Warning: strip: sample 377-392 has zero value, stripped
+Warning: strip: sample 444-462 has zero value, stripped
+Warning: strip: sample 296-312 has zero value, stripped
+Warning: strip: sample 61-82 has zero value, stripped
+Warning: strip: sample 213-229 has zero value, stripped
+Warning: strip: sample 444-463 has zero value, stripped
+Warning: strip: sample 94-110 has zero value, stripped
+Warning: strip: sample 353-368 has zero value, stripped
+Warning: strip: sample 153-169 has zero value, stripped
+Warning: strip: sample 432-448 has zero value, stripped
+Warning: strip: sample 271-287 has zero value, stripped
+Warning: strip: sample 29-47 has zero value, stripped
+Warning: strip: sample 395-411 has zero value, stripped
+Warning: strip: sample 300-323 has zero value, stripped
+Warning: strip: sample 342-361 has zero value, stripped
+Warning: strip: sample 272-293 has zero value, stripped
+Warning: strip: sample 19-38 has zero value, stripped
+Warning: strip: sample 325-342 has zero value, stripped
+Warning: strip: sample 264-282 has zero value, stripped
+Warning: strip: sample 159-178 has zero value, stripped
+Warning: strip: sample 178-195 has zero value, stripped
+Warning: strip: sample 225-241 has zero value, stripped
+Warning: strip: sample 172-195 has zero value, stripped
+Warning: strip: sample 34-49 has zero value, stripped
+Warning: strip: sample 212-230 has zero value, stripped
+Warning: strip: sample 44-63 has zero value, stripped
+Warning: strip: sample 288-315 has zero value, stripped
+Warning: strip: sample 376-393 has zero value, stripped
+Warning: strip: sample 292-311 has zero value, stripped
+Warning: strip: sample 353-372 has zero value, stripped
+Warning: strip: sample 387-405 has zero value, stripped
+Warning: strip: sample 428-451 has zero value, stripped
+Warning: strip: sample 401-416 has zero value, stripped
+Warning: strip: sample 468-486 has zero value, stripped
+Warning: strip: sample 334-351 has zero value, stripped
+Warning: strip: sample 301-316 has zero value, stripped
+Warning: strip: sample 317-333 has zero value, stripped
+Warning: strip: sample 184-207 has zero value, stripped
+Warning: strip: sample 6-23 has zero value, stripped
+Warning: strip: sample 114-133 has zero value, stripped
+Warning: strip: sample 156-171 has zero value, stripped
+Warning: strip: sample 73-89 has zero value, stripped
+Warning: strip: sample 364-384 has zero value, stripped
+Warning: strip: sample 440-463 has zero value, stripped
+Warning: strip: sample 223-243 has zero value, stripped
+Warning: strip: sample 49-64 has zero value, stripped
+Warning: strip: sample 246-270 has zero value, stripped
+Warning: strip: sample 370-389 has zero value, stripped
+Warning: strip: sample 24-39 has zero value, stripped
+Warning: strip: sample 86-103 has zero value, stripped
+Warning: strip: sample 264-282 has zero value, stripped
+Warning: strip: sample 284-301 has zero value, stripped
+Warning: strip: sample 66-87 has zero value, stripped
+Warning: strip: sample 160-183 has zero value, stripped
+Warning: strip: sample 479-495 has zero value, stripped
+Warning: strip: sample 267-284 has zero value, stripped
+Warning: strip: sample 316-331 has zero value, stripped
+Warning: strip: sample 124-140 has zero value, stripped
+Warning: strip: sample 168-199 has zero value, stripped
+Warning: strip: sample 429-447 has zero value, stripped
+Warning: strip: sample 69-84 has zero value, stripped
+Warning: strip: sample 342-359 has zero value, stripped
+Warning: strip: sample 134-156 has zero value, stripped
+Warning: strip: sample 238-257 has zero value, stripped
+Warning: strip: sample 38-63 has zero value, stripped
+Warning: strip: sample 80-97 has zero value, stripped
+Warning: strip: sample 452-475 has zero value, stripped
+Warning: strip: sample 226-251 has zero value, stripped
+Warning: strip: sample 308-329 has zero value, stripped
+Warning: strip: sample 134-156 has zero value, stripped
+Warning: strip: sample 354-374 has zero value, stripped
+Warning: strip: sample 23-46 has zero value, stripped
+Warning: strip: sample 191-206 has zero value, stripped
+Warning: strip: sample 380-396 has zero value, stripped
+Warning: strip: sample 189-209 has zero value, stripped
+Warning: strip: sample 325-346 has zero value, stripped
+Warning: strip: sample 98-114 has zero value, stripped
+Warning: strip: sample 78-99 has zero value, stripped
+Warning: strip: sample 252-268 has zero value, stripped
+Warning: strip: sample 185-211 has zero value, stripped
+Warning: strip: sample 445-466 has zero value, stripped
+Warning: strip: sample 160-179 has zero value, stripped
+Warning: strip: sample 463-479 has zero value, stripped
+Warning: strip: sample 31-50 has zero value, stripped
+Warning: strip: sample 51-77 has zero value, stripped
+Warning: strip: sample 328-355 has zero value, stripped
+Warning: strip: sample 29-53 has zero value, stripped
+Warning: strip: sample 58-74 has zero value, stripped
+Warning: strip: sample 402-421 has zero value, stripped
+Warning: strip: sample 16-35 has zero value, stripped
+Warning: strip: sample 37-52 has zero value, stripped
+Warning: strip: sample 84-99 has zero value, stripped
+Warning: strip: sample 203-218 has zero value, stripped
+Warning: strip: sample 394-409 has zero value, stripped
+Warning: strip: sample 450-467 has zero value, stripped
+Warning: strip: sample 344-359 has zero value, stripped
+Warning: strip: sample 406-424 has zero value, stripped
+Warning: strip: sample 156-177 has zero value, stripped
+Warning: strip: sample 206-223 has zero value, stripped
+Warning: strip: sample 37-57 has zero value, stripped
+Warning: strip: sample 351-368 has zero value, stripped
+Warning: strip: sample 475-490 has zero value, stripped
+Warning: strip: sample 443-461 has zero value, stripped
+Warning: strip: sample 181-199 has zero value, stripped
+Warning: strip: sample 168-193 has zero value, stripped
+Warning: strip: sample 430-448 has zero value, stripped
+Warning: strip: sample 12-29 has zero value, stripped
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Warning: strip: sample 299-318 has zero value, stripped
+Warning: strip: sample 288-303 has zero value, stripped
+Warning: strip: sample 441-462 has zero value, stripped
+Warning: strip: sample 449-467 has zero value, stripped
+Warning: strip: sample 323-339 has zero value, stripped
+Warning: strip: sample 134-149 has zero value, stripped
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Warning: strip: sample 480-496 has zero value, stripped
+Warning: strip: sample 193-208 has zero value, stripped
+Warning: strip: sample 48-65 has zero value, stripped
+Warning: strip: sample 291-310 has zero value, stripped
+Warning: strip: sample 291-308 has zero value, stripped
+Warning: strip: sample 320-335 has zero value, stripped
+Warning: strip: sample 310-327 has zero value, stripped
+Warning: strip: sample 390-414 has zero value, stripped
+Warning: strip: sample 82-99 has zero value, stripped
+Warning: strip: sample 67-82 has zero value, stripped
+Warning: strip: sample 109-127 has zero value, stripped
+Warning: strip: sample 409-426 has zero value, stripped
+Warning: strip: sample 53-70 has zero value, stripped
+Warning: strip: sample 338-355 has zero value, stripped
+Warning: strip: sample 441-457 has zero value, stripped
+Warning: strip: sample 200-222 has zero value, stripped
+Warning: strip: sample 343-359 has zero value, stripped
+Warning: strip: sample 399-419 has zero value, stripped
+Warning: strip: sample 165-180 has zero value, stripped
+Warning: strip: sample 474-491 has zero value, stripped
+Warning: strip: sample 98-114 has zero value, stripped
+Warning: strip: sample 163-178 has zero value, stripped
+Warning: strip: sample 428-445 has zero value, stripped
+Warning: strip: sample 97-112 has zero value, stripped
+Warning: strip: sample 451-468 has zero value, stripped
+Warning: strip: sample 124-139 has zero value, stripped
+Warning: strip: sample 334-352 has zero value, stripped
+Warning: strip: sample 441-456 has zero value, stripped
+Warning: strip: sample 184-201 has zero value, stripped
+Warning: strip: sample 440-455 has zero value, stripped
+Warning: strip: sample 474-489 has zero value, stripped
+Warning: strip: sample 242-258 has zero value, stripped
+Warning: strip: sample 232-248 has zero value, stripped
+Warning: strip: sample 151-168 has zero value, stripped
+Warning: strip: sample 163-178 has zero value, stripped
+Warning: strip: sample 405-422 has zero value, stripped
+Warning: strip: sample 179-197 has zero value, stripped
+Warning: strip: sample 229-244 has zero value, stripped
+Warning: strip: sample 146-161 has zero value, stripped
+Warning: strip: sample 27-43 has zero value, stripped
+Warning: strip: sample 163-180 has zero value, stripped
+Warning: strip: sample 67-82 has zero value, stripped
+Warning: strip: sample 432-447 has zero value, stripped
+Warning: strip: sample 284-300 has zero value, stripped
+Warning: strip: sample 379-395 has zero value, stripped
+Warning: strip: sample 192-208 has zero value, stripped
+Warning: strip: sample 120-137 has zero value, stripped
+Warning: strip: sample 421-438 has zero value, stripped
+Warning: strip: sample 448-463 has zero value, stripped
+Warning: strip: sample 169-187 has zero value, stripped
+Warning: strip: sample 303-318 has zero value, stripped
+Warning: strip: sample 387-402 has zero value, stripped
+Warning: strip: sample 324-339 has zero value, stripped
+Warning: strip: sample 196-212 has zero value, stripped
+Warning: strip: sample 373-388 has zero value, stripped
+Warning: strip: sample 269-285 has zero value, stripped
+Warning: strip: sample 148-163 has zero value, stripped
+Warning: strip: sample 467-482 has zero value, stripped
+Warning: strip: sample 277-294 has zero value, stripped
+Warning: strip: sample 167-185 has zero value, stripped
+Warning: strip: sample 162-178 has zero value, stripped
+Warning: strip: sample 229-248 has zero value, stripped
+Warning: strip: sample 43-59 has zero value, stripped
+Warning: strip: sample 83-98 has zero value, stripped
+Warning: strip: sample 471-486 has zero value, stripped
+Warning: strip: sample 139-155 has zero value, stripped
+Warning: strip: sample 233-250 has zero value, stripped
+Warning: strip: sample 400-415 has zero value, stripped
+Warning: strip: sample 46-65 has zero value, stripped
+Warning: strip: sample 293-314 has zero value, stripped
+Warning: strip: sample 250-265 has zero value, stripped
+Warning: strip: sample 289-304 has zero value, stripped
+Warning: strip: sample 0-18 has zero value, stripped
+Warning: strip: sample 409-426 has zero value, stripped
+Warning: strip: sample 348-363 has zero value, stripped
+Warning: strip: sample 170-185 has zero value, stripped
+Warning: strip: sample 57-73 has zero value, stripped
+Warning: strip: sample 120-136 has zero value, stripped
+Warning: strip: sample 188-203 has zero value, stripped
+Warning: strip: sample 184-204 has zero value, stripped
+Warning: strip: sample 244-260 has zero value, stripped
+Warning: strip: sample 440-456 has zero value, stripped
+Warning: strip: sample 111-135 has zero value, stripped
+Warning: strip: sample 200-218 has zero value, stripped
+Warning: strip: sample 470-486 has zero value, stripped
+Warning: strip: sample 32-47 has zero value, stripped
+Warning: strip: sample 207-227 has zero value, stripped
+Warning: strip: sample 295-311 has zero value, stripped
+Warning: strip: sample 199-214 has zero value, stripped
+Warning: strip: sample 232-249 has zero value, stripped
+Warning: strip: sample 456-471 has zero value, stripped
+Warning: strip: sample 236-252 has zero value, stripped
+Warning: strip: sample 415-431 has zero value, stripped
+Warning: strip: sample 279-296 has zero value, stripped
+Warning: strip: sample 37-58 has zero value, stripped
+Warning: strip: sample 545-560 has zero value, stripped
+Warning: strip: sample 297-319 has zero value, stripped
+Warning: strip: sample 154-173 has zero value, stripped
+Warning: strip: sample 468-484 has zero value, stripped
+Warning: strip: sample 278-302 has zero value, stripped
+Warning: strip: sample 393-409 has zero value, stripped
+Warning: strip: sample 270-285 has zero value, stripped
+Warning: strip: sample 54-75 has zero value, stripped
+Warning: strip: sample 372-388 has zero value, stripped
+Warning: strip: sample 224-239 has zero value, stripped
+Warning: strip: sample 161-178 has zero value, stripped
+Warning: strip: sample 57-72 has zero value, stripped
+Warning: strip: sample 81-98 has zero value, stripped
+Warning: strip: sample 214-238 has zero value, stripped
+Warning: strip: sample 26-42 has zero value, stripped
+Warning: strip: sample 287-304 has zero value, stripped
+Warning: strip: sample 368-385 has zero value, stripped
+Warning: strip: sample 60-76 has zero value, stripped
+Warning: strip: sample 129-147 has zero value, stripped
+Warning: strip: sample 86-101 has zero value, stripped
+Warning: strip: sample 385-400 has zero value, stripped
+Warning: strip: sample 392-407 has zero value, stripped
+Warning: strip: sample 191-208 has zero value, stripped
+Warning: strip: sample 88-106 has zero value, stripped
+Warning: strip: sample 433-453 has zero value, stripped
+Warning: strip: sample 305-321 has zero value, stripped
+Warning: strip: sample 40-58 has zero value, stripped
+Warning: strip: sample 327-343 has zero value, stripped
+Warning: strip: sample 382-402 has zero value, stripped
+Warning: strip: sample 77-92 has zero value, stripped
+Warning: strip: sample 261-279 has zero value, stripped
+Warning: strip: sample 160-176 has zero value, stripped
+Warning: strip: sample 330-350 has zero value, stripped
+Warning: strip: sample 327-343 has zero value, stripped
+Warning: strip: sample 356-374 has zero value, stripped
+Warning: strip: sample 236-251 has zero value, stripped
+Warning: strip: sample 8-25 has zero value, stripped
+Warning: strip: sample 310-325 has zero value, stripped
+Warning: strip: sample 300-324 has zero value, stripped
+Warning: strip: sample 273-288 has zero value, stripped
+Warning: strip: sample 340-355 has zero value, stripped
+Warning: strip: sample 206-222 has zero value, stripped
+Warning: strip: sample 404-419 is invalid, stripped
+Warning: strip: sample 176-203 has zero value, stripped
+Warning: strip: sample 428-443 has zero value, stripped
+Warning: strip: sample 106-121 has zero value, stripped
+Warning: strip: sample 136-154 has zero value, stripped
+Warning: strip: sample 188-206 has zero value, stripped
+Warning: strip: sample 15-31 has zero value, stripped
+Warning: strip: sample 269-286 has zero value, stripped
+Warning: strip: sample 410-430 has zero value, stripped
+Warning: strip: sample 313-330 has zero value, stripped
+Warning: strip: sample 395-412 has zero value, stripped
+Warning: strip: sample 109-131 has zero value, stripped
+Warning: strip: sample 87-107 has zero value, stripped
+Warning: strip: sample 303-329 has zero value, stripped
+Warning: strip: sample 252-273 has zero value, stripped
+Warning: strip: sample 296-314 has zero value, stripped
+Warning: strip: sample 197-212 has zero value, stripped
+Warning: strip: sample 262-284 has zero value, stripped
+Warning: strip: sample 367-385 has zero value, stripped
+Warning: strip: sample 280-297 has zero value, stripped
+Warning: strip: sample 472-491 has zero value, stripped
+Warning: strip: sample 14-29 has zero value, stripped
+Warning: strip: sample 159-177 has zero value, stripped
+Warning: strip: sample 274-289 has zero value, stripped
+Warning: strip: sample 226-242 has zero value, stripped
+Warning: strip: sample 315-335 has zero value, stripped
+Warning: strip: sample 345-360 has zero value, stripped
+Warning: strip: sample 306-323 has zero value, stripped
+Warning: strip: sample 378-396 has zero value, stripped
+Warning: strip: sample 130-147 has zero value, stripped
+Warning: strip: sample 0-18 has zero value, stripped
+Warning: strip: sample 215-236 has zero value, stripped
+Warning: strip: sample 418-434 has zero value, stripped
+Warning: strip: sample 201-221 has zero value, stripped
+Warning: strip: sample 48-65 has zero value, stripped
+Warning: strip: sample 284-305 has zero value, stripped
+Warning: strip: sample 44-59 has zero value, stripped
+Warning: strip: sample 168-186 has zero value, stripped
+Warning: strip: sample 136-151 has zero value, stripped
+Warning: strip: sample 273-290 has zero value, stripped
+Warning: strip: sample 175-191 has zero value, stripped
+Warning: strip: sample 254-274 has zero value, stripped
+Warning: strip: sample 300-315 has zero value, stripped
+Warning: strip: sample 246-277 has zero value, stripped
+Warning: strip: sample 17-34 has zero value, stripped
+Warning: strip: sample 263-279 has zero value, stripped
+Warning: strip: sample 54-70 has zero value, stripped
+Warning: strip: sample 104-120 has zero value, stripped
+Warning: strip: sample 431-447 has zero value, stripped
+Warning: strip: sample 325-348 has zero value, stripped
+Warning: strip: sample 8-24 has zero value, stripped
+Warning: strip: sample 86-106 has zero value, stripped
+Warning: strip: sample 29-46 has zero value, stripped
+Warning: strip: sample 0-15 has zero value, stripped
+Warning: strip: sample 73-99 has zero value, stripped
+Warning: strip: sample 208-230 has zero value, stripped
+Warning: strip: sample 260-276 has zero value, stripped
+Warning: strip: sample 324-339 has zero value, stripped
+Warning: strip: sample 241-257 has zero value, stripped
+Warning: strip: sample 48-63 has zero value, stripped
+Warning: strip: sample 332-350 has zero value, stripped
+Warning: strip: sample 92-113 has zero value, stripped
+Warning: strip: sample 255-271 has zero value, stripped
+Warning: strip: sample 52-68 has zero value, stripped
+Warning: strip: sample 155-173 has zero value, stripped
+Warning: strip: sample 37-52 has zero value, stripped
+Warning: strip: sample 400-417 has zero value, stripped
+Warning: strip: sample 156-172 has zero value, stripped
+Warning: strip: sample 194-209 has zero value, stripped
+Warning: strip: sample 293-308 has zero value, stripped
+Warning: strip: sample 69-84 has zero value, stripped
+Warning: strip: sample 43-59 has zero value, stripped
+Warning: strip: sample 273-290 has zero value, stripped
+Warning: strip: sample 289-313 has zero value, stripped
+Warning: strip: sample 397-412 has zero value, stripped
+Warning: strip: sample 168-184 has zero value, stripped
+Warning: strip: sample 132-151 has zero value, stripped
+Warning: strip: sample 3-19 has zero value, stripped
+Warning: strip: sample 437-459 has zero value, stripped
+Warning: strip: sample 424-440 has zero value, stripped
+Warning: strip: sample 256-271 has zero value, stripped
+Warning: strip: sample 40-60 has zero value, stripped
+Warning: strip: sample 228-243 has zero value, stripped
+Warning: strip: sample 66-82 has zero value, stripped
+Warning: strip: sample 424-439 has zero value, stripped
+Warning: strip: sample 324-355 has zero value, stripped
+Warning: strip: sample 395-412 has zero value, stripped
+Warning: strip: sample 64-82 has zero value, stripped
+Warning: strip: sample 470-485 has zero value, stripped
+Warning: strip: sample 59-75 has zero value, stripped
+Warning: strip: sample 449-467 has zero value, stripped
+Warning: strip: sample 262-280 has zero value, stripped
+Warning: strip: sample 467-485 has zero value, stripped
+Warning: strip: sample 252-267 has zero value, stripped
+Warning: strip: sample 265-281 has zero value, stripped
+Warning: strip: sample 137-159 has zero value, stripped
+Warning: strip: sample 186-203 has zero value, stripped
+Warning: strip: sample 447-465 has zero value, stripped
+Warning: strip: sample 436-451 has zero value, stripped
+Warning: strip: sample 336-353 has zero value, stripped
+Warning: strip: sample 316-331 has zero value, stripped
+Warning: strip: sample 195-213 has zero value, stripped
+Warning: strip: sample 474-494 has zero value, stripped
+Warning: strip: sample 327-342 has zero value, stripped
+Warning: strip: sample 185-200 has zero value, stripped
+Warning: strip: sample 298-315 has zero value, stripped
+Warning: strip: sample 312-327 has zero value, stripped
+Warning: strip: sample 78-94 has zero value, stripped
+Warning: strip: sample 220-236 has zero value, stripped
+Warning: strip: sample 352-367 has zero value, stripped
+Warning: strip: sample 27-42 has zero value, stripped
+Warning: strip: sample 48-65 has zero value, stripped
+Warning: strip: sample 324-340 has zero value, stripped
+Warning: strip: sample 83-99 has zero value, stripped
+Warning: strip: sample 52-69 has zero value, stripped
+Warning: strip: sample 84-99 has zero value, stripped
+Warning: strip: sample 201-222 has zero value, stripped
+Warning: strip: sample 77-93 has zero value, stripped
+Warning: strip: sample 83-99 has zero value, stripped
+Warning: strip: sample 205-226 has zero value, stripped
+Warning: strip: sample 346-362 has zero value, stripped
+Warning: strip: sample 88-107 has zero value, stripped
+Warning: strip: sample 21-36 has zero value, stripped
+Warning: strip: sample 196-212 has zero value, stripped
+Warning: strip: sample 193-214 has zero value, stripped
+Warning: strip: sample 356-371 has zero value, stripped
+Warning: strip: sample 353-368 has zero value, stripped
+Warning: strip: sample 8-37 has zero value, stripped
+Warning: strip: sample 383-403 has zero value, stripped
+Warning: strip: sample 238-253 has zero value, stripped
+Warning: strip: sample 320-336 has zero value, stripped
+Warning: strip: sample 379-395 has zero value, stripped
+Warning: strip: sample 206-221 has zero value, stripped
+Warning: strip: sample 288-306 has zero value, stripped
+Warning: strip: sample 124-141 has zero value, stripped
+Warning: strip: sample 211-226 has zero value, stripped
+Warning: strip: sample 288-303 has zero value, stripped
+Warning: strip: sample 161-179 has zero value, stripped
+Warning: strip: sample 188-203 has zero value, stripped
+Warning: strip: sample 58-76 has zero value, stripped
+Warning: strip: sample 462-480 has zero value, stripped
+Warning: strip: sample 48-64 has zero value, stripped
+Warning: strip: sample 384-403 has zero value, stripped
+Warning: strip: sample 212-227 has zero value, stripped
+Warning: strip: sample 298-316 has zero value, stripped
+Warning: strip: sample 452-481 has zero value, stripped
+Warning: strip: sample 152-167 has zero value, stripped
+Warning: strip: sample 80-97 has zero value, stripped
+Warning: strip: sample 424-439 has zero value, stripped
+Warning: strip: sample 396-414 has zero value, stripped
+Warning: strip: sample 260-276 has zero value, stripped
+Warning: strip: sample 206-221 has zero value, stripped
+Warning: strip: sample 356-373 has zero value, stripped
+Warning: strip: sample 392-408 has zero value, stripped
+Warning: strip: sample 453-468 has zero value, stripped
+Warning: strip: sample 78-95 has zero value, stripped
+Warning: strip: sample 236-251 has zero value, stripped
+Warning: strip: sample 288-306 has zero value, stripped
+Warning: strip: sample 191-207 has zero value, stripped
+Warning: strip: sample 325-341 has zero value, stripped
+Warning: strip: sample 167-184 has zero value, stripped
+Warning: strip: sample 333-349 has zero value, stripped
+Warning: strip: sample 443-458 has zero value, stripped
+Warning: strip: sample 393-410 has zero value, stripped
+Warning: strip: sample 199-222 has zero value, stripped
+Warning: strip: sample 276-291 has zero value, stripped
+Warning: strip: sample 317-335 has zero value, stripped
+Warning: strip: sample 28-45 has zero value, stripped
+Warning: strip: sample 331-346 has zero value, stripped
+Warning: strip: sample 42-57 has zero value, stripped
+Warning: strip: sample 44-77 has zero value, stripped
+Warning: strip: sample 419-434 has zero value, stripped
+Warning: strip: sample 401-421 has zero value, stripped
+Warning: strip: sample 90-107 has zero value, stripped
+Warning: strip: sample 274-289 has zero value, stripped
+Warning: strip: sample 53-75 has zero value, stripped
+Warning: strip: sample 175-196 has zero value, stripped
+Warning: strip: sample 40-59 has zero value, stripped
+Warning: strip: sample 97-112 has zero value, stripped
+Warning: strip: sample 138-154 has zero value, stripped
+Warning: strip: sample 220-239 has zero value, stripped
+Warning: strip: sample 370-387 has zero value, stripped
+Warning: strip: sample 27-42 has zero value, stripped
+Warning: strip: sample 339-354 has zero value, stripped
+Warning: strip: sample 285-300 has zero value, stripped
+Warning: strip: sample 235-250 has zero value, stripped
+Warning: strip: sample 320-335 has zero value, stripped
+Warning: strip: sample 60-77 has zero value, stripped
+Warning: strip: sample 31-47 has zero value, stripped
+Warning: strip: sample 195-213 has zero value, stripped
+Warning: strip: sample 60-79 has zero value, stripped
+Warning: strip: sample 317-334 has zero value, stripped
+Warning: strip: sample 177-195 has zero value, stripped
+Warning: strip: sample 121-136 has zero value, stripped
+Warning: strip: sample 20-39 has zero value, stripped
+Warning: strip: sample 330-345 has zero value, stripped
+Warning: strip: sample 220-236 has zero value, stripped
+Warning: strip: sample 275-291 has zero value, stripped
+Warning: strip: sample 10-26 has zero value, stripped
+Warning: strip: sample 408-424 has zero value, stripped
+Warning: strip: sample 426-441 has zero value, stripped
+Warning: strip: sample 263-281 has zero value, stripped
+Warning: strip: sample 94-116 has zero value, stripped
+Warning: strip: sample 440-457 has zero value, stripped
+Warning: strip: sample 251-272 has zero value, stripped
+Warning: strip: sample 141-158 has zero value, stripped
+Warning: strip: sample 184-200 has zero value, stripped
+Warning: strip: sample 395-410 has zero value, stripped
+Warning: strip: sample 410-427 has zero value, stripped
+Warning: strip: sample 191-206 has zero value, stripped
+Warning: strip: sample 264-282 has zero value, stripped
+Warning: strip: sample 377-392 has zero value, stripped
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Warning: strip: sample 330-345 has zero value, stripped
+Warning: strip: sample 296-311 has zero value, stripped
+Warning: strip: sample 255-277 has zero value, stripped
+Warning: strip: sample 201-216 has zero value, stripped
+Warning: strip: sample 328-345 has zero value, stripped
