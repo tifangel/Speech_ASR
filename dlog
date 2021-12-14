@@ -3,38 +3,39 @@ WARNING: no script file VoxForgeDict.txt.ded
 Dictionary Usage Statistics
 ---------------------------
   Dictionary    TotalWords WordsUsed  TotalProns PronsUsed
-VoxForgeDict        62         62         62         62
-        dict        62         62         62         62
+VoxForgeDict        64         64         64         64
+        dict        64         64         64         64
 
-62 words required, 0 missing
+64 words required, 0 missing
 
 New Phone Usage Counts
 ---------------------
-  1. aa    :    64
+  1. aa    :    65
   2. d     :    12
-  3. sp    :    60
+  3. sp    :    62
   4. m     :    18
-  5. b     :     9
+  5. b     :    10
   6. ih    :    28
   7. l     :    14
   8. n     :    23
   9. t     :    11
  10. r     :    10
  11. p     :    13
- 12. k     :     8
+ 12. k     :     9
  13. hh    :     5
- 14. y     :     4
- 15. s     :    15
- 16. ao    :     4
- 17. eh    :    14
- 18. uw    :    18
- 19. c     :     1
- 20. w     :     2
- 21. g     :     6
- 22. ng    :     7
- 23. h     :     2
- 24. oh    :     1
- 25. sil   :     2
- 26. j     :     1
+ 14. y     :     5
+ 15. eh    :    15
+ 16. s     :    16
+ 17. o     :     1
+ 18. ao    :     4
+ 19. uw    :    18
+ 20. c     :     1
+ 21. w     :     2
+ 22. g     :     6
+ 23. ng    :     7
+ 24. h     :     2
+ 25. oh    :     1
+ 26. sil   :     2
+ 27. j     :     1
 
 Dictionary dict created

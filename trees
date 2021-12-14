@@ -149,16 +149,15 @@ QS 'L_y' { "y-*" }
 
 aa[2]
 {
-   0                    'L_y'  "ST_aa_2_1"  "ST_aa_2_2" 
+   0                    'L_y'      -1     "ST_aa_2_3" 
+  -1            'L_Fricative'  "ST_aa_2_1"  "ST_aa_2_2" 
 }
 
 d[2]
    "ST_d_2_1"
 
 m[2]
-{
-   0                 'R_High'  "ST_m_2_1"  "ST_m_2_2" 
-}
+   "ST_m_2_1"
 
 b[2]
    "ST_b_2_1"
@@ -170,7 +169,9 @@ l[2]
    "ST_l_2_1"
 
 n[2]
-   "ST_n_2_1"
+{
+   0            'L_V-Central'  "ST_n_2_1"  "ST_n_2_2" 
+}
 
 t[2]
    "ST_t_2_1"
@@ -190,16 +191,22 @@ hh[2]
 y[2]
    "ST_y_2_1"
 
+eh[2]
+{
+   0             'L_Anterior'  "ST_eh_2_1"  "ST_eh_2_2" 
+}
+
 s[2]
 {
-   0                'R_Short'  "ST_s_2_1"  "ST_s_2_2" 
+   0          'L_NonBoundary'      -1     "ST_s_2_2" 
+  -1                'R_Short'  "ST_s_2_1"  "ST_s_2_2" 
 }
+
+o[2]
+   "ST_o_2_1"
 
 ao[2]
    "ST_ao_2_1"
-
-eh[2]
-   "ST_eh_2_1"
 
 uw[2]
    "ST_uw_2_1"
@@ -229,14 +236,16 @@ j[2]
    "ST_j_2_1"
 
 aa[3]
-   "ST_aa_3_1"
+{
+   0                'L_Nasal'  "ST_aa_3_1"  "ST_aa_3_2" 
+}
 
 d[3]
    "ST_d_3_1"
 
 m[3]
 {
-   0               'R_IVowel'  "ST_m_3_1"  "ST_m_3_2" 
+   0                 'R_Stop'  "ST_m_3_1"  "ST_m_3_2" 
 }
 
 b[3]
@@ -244,8 +253,7 @@ b[3]
 
 ih[3]
 {
-   0           'R_Continuent'  "ST_ih_3_1"      -1    
-  -1            'L_C-Central'  "ST_ih_3_1"  "ST_ih_3_2" 
+   0                'R_Vowel'  "ST_ih_3_1"  "ST_ih_3_2" 
 }
 
 l[3]
@@ -258,7 +266,9 @@ t[3]
    "ST_t_3_1"
 
 r[3]
-   "ST_r_3_1"
+{
+   0             'L_Dipthong'  "ST_r_3_1"  "ST_r_3_2" 
+}
 
 p[3]
    "ST_p_3_1"
@@ -272,14 +282,17 @@ hh[3]
 y[3]
    "ST_y_3_1"
 
+eh[3]
+   "ST_eh_3_1"
+
 s[3]
    "ST_s_3_1"
 
+o[3]
+   "ST_o_3_1"
+
 ao[3]
    "ST_ao_3_1"
-
-eh[3]
-   "ST_eh_3_1"
 
 uw[3]
    "ST_uw_3_1"
@@ -310,16 +323,14 @@ j[3]
 
 aa[4]
 {
-   0            'L_Fricative'      -1     "ST_aa_4_3" 
-  -1                    'R_y'      -2     "ST_aa_4_2" 
-  -2                'R_Nasal'      -3     "ST_aa_4_2" 
-  -3                 'R_Long'  "ST_aa_4_1"  "ST_aa_4_3" 
+   0             'L_Syllabic'      -2         -1    
+  -1                 'R_Long'  "ST_aa_4_3"  "ST_aa_4_4" 
+  -2                    'R_y'      -3     "ST_aa_4_2" 
+  -3            'L_Fricative'  "ST_aa_4_3"  "ST_aa_4_1" 
 }
 
 d[4]
-{
-   0               'R_V-Back'  "ST_d_4_1"  "ST_d_4_2" 
-}
+   "ST_d_4_1"
 
 m[4]
 {
@@ -342,7 +353,9 @@ l[4]
 }
 
 n[4]
-   "ST_n_4_1"
+{
+   0            'R_V-Central'  "ST_n_4_1"  "ST_n_4_2" 
+}
 
 t[4]
    "ST_t_4_1"
@@ -364,17 +377,24 @@ hh[4]
 y[4]
    "ST_y_4_1"
 
+eh[4]
+{
+   0                 'L_Stop'  "ST_eh_4_1"  "ST_eh_4_2" 
+}
+
 s[4]
    "ST_s_4_1"
+
+o[4]
+   "ST_o_4_1"
 
 ao[4]
    "ST_ao_4_1"
 
-eh[4]
-   "ST_eh_4_1"
-
 uw[4]
-   "ST_uw_4_1"
+{
+   0                    'R_k'  "ST_uw_4_1"  "ST_uw_4_2" 
+}
 
 c[4]
    "ST_c_4_1"

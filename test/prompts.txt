@@ -1,0 +1,7 @@
+test1.wav = PESAN DUA NASI
+test2.wav = PESAN SATU AYAM
+test3.wav = PESAN DUA GORENGAN UNTUK DIAMBIL SIANG
+test4.wav = PESAN SUP UNTUK PAGI
+test5.wav = PESAN GORENGAN UNTUK DIAMBIL
+test6.wav = PESAN NASI UNTUK DIANTAR
+HCopy -A -D -T 1 -C wav_config -S codetest.scp

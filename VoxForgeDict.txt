@@ -4,6 +4,7 @@ ANTAR       [ANTAR]         aa n t aa r
 APA         [APA]           aa p aa
 APAKAH      [APAKAH]        aa p aa k aa hh
 AYAM        [AYAM]          aa y aa m
+BESOK       [BESOK]         b eh s o k
 BISA        [BISA]          b ih s aa
 BOLEH       [BOLEH]         b ao l eh hh
 BULAN       [BULAN]         b uw l aa n
@@ -59,4 +60,5 @@ TIGA        [TIGA]          t ih g aa
 TUJUH       [TUJUH]         t uw j uw hh
 UNTUK       [UNTUK]         uw n t uw k
 WARUNG      [WARUNG]        w aa r uw ng
+YA          [YA]            y aa
 YANG        [YANG]          y aa ng

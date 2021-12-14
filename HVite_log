@@ -13,179 +13,209 @@ HTK Configuration Parameters[10]
 #                 TARGETRATE         100000.000000
 #                 TARGETKIND          MFCC_0_D_N_Z
 
-Read 26 physical / 26 logical HMMs
+Read 27 physical / 27 logical HMMs
 Label file will be used to align each file
 Aligning File: train/mfcc/sample1.mfc
 Created lattice with 10 nodes / 9 arcs from label file
-SENT-END HALO PESAN NASI GORENG UNTUK DIAMBIL PAGI INI SENT-END  ==  [489 frames] -64.7243 [Ac=-31650.2 LM=0.0] (Act=13.2)
+SENT-END HALO PESAN NASI GORENG UNTUK DIAMBIL PAGI INI SENT-END  ==  [489 frames] -64.9114 [Ac=-31741.7 LM=0.0] (Act=12.3)
 Aligning File: train/mfcc/sample2.mfc
 Created lattice with 9 nodes / 8 arcs from label file
-SENT-END PAGI SAYA PESAN MIE GORENG UNTUK DIAMBIL SENT-END  ==  [527 frames] -63.4467 [Ac=-33436.4 LM=0.0] (Act=12.5)
+SENT-END PAGI SAYA PESAN MIE GORENG UNTUK DIAMBIL SENT-END  ==  [527 frames] -63.7251 [Ac=-33583.1 LM=0.0] (Act=12.2)
 Aligning File: train/mfcc/sample3.mfc
 Created lattice with 10 nodes / 9 arcs from label file
-SENT-END SIANG INI SAYA PERGI DIANTAR MAKAN SUP AYAM SENT-END  ==  [455 frames] -66.4752 [Ac=-30246.2 LM=0.0] (Act=18.2)
+SENT-END SIANG INI SAYA PERGI DIANTAR MAKAN SUP AYAM SENT-END  ==  [455 frames] -67.1671 [Ac=-30561.0 LM=0.0] (Act=22.7)
 Aligning File: train/mfcc/sample4.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END SAYA MAU MAKAN NASI GORENG SENT-END  ==  [390 frames] -62.9878 [Ac=-24565.3 LM=0.0] (Act=14.2)
+SENT-END SAYA MAU MAKAN NASI GORENG SENT-END  ==  [390 frames] -63.4718 [Ac=-24754.0 LM=0.0] (Act=14.1)
 Aligning File: train/mfcc/sample5.mfc
 Created lattice with 10 nodes / 9 arcs from label file
-SENT-END INGIN PESAN TIGA SUP AYAM UNTUK MALAM INI SENT-END  ==  [467 frames] -65.5542 [Ac=-30613.8 LM=0.0] (Act=15.1)
+SENT-END INGIN PESAN TIGA SUP AYAM UNTUK MALAM INI SENT-END  ==  [467 frames] -66.2052 [Ac=-30917.8 LM=0.0] (Act=16.4)
 Aligning File: train/mfcc/sample6.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END PESAN GORENGAN DIANTAR SIANG INI SENT-END  ==  [331 frames] -66.2363 [Ac=-21924.2 LM=0.0] (Act=14.5)
+SENT-END PESAN GORENGAN DIANTAR SIANG INI SENT-END  ==  [331 frames] -66.6774 [Ac=-22070.2 LM=0.0] (Act=16.0)
 Aligning File: train/mfcc/sample7.mfc
 Created lattice with 9 nodes / 8 arcs from label file
-SENT-END SATU SUP AYAM DUA GORENGAN TIGA NASI SENT-END  ==  [395 frames] -65.6212 [Ac=-25920.4 LM=0.0] (Act=14.9)
+SENT-END SATU SUP AYAM DUA GORENGAN TIGA NASI SENT-END  ==  [395 frames] -66.0898 [Ac=-26105.5 LM=0.0] (Act=14.9)
 Aligning File: train/mfcc/sample8.mfc
 Created lattice with 9 nodes / 8 arcs from label file
-SENT-END PULANG SORE INI PESAN ANTAR NASI AYAM SENT-END  ==  [369 frames] -66.3002 [Ac=-24464.8 LM=0.0] (Act=14.6)
+SENT-END PULANG SORE INI PESAN ANTAR NASI AYAM SENT-END  ==  [369 frames] -66.6261 [Ac=-24585.0 LM=0.0] (Act=15.7)
 Aligning File: train/mfcc/sample9.mfc
 Created lattice with 10 nodes / 9 arcs from label file
-SENT-END SATU DUA TIGA EMPAT LIMA ENAM TUJUH DELAPAN SENT-END  ==  [645 frames] -66.0236 [Ac=-42585.2 LM=0.0] (Act=19.4)
+SENT-END SATU DUA TIGA EMPAT LIMA ENAM TUJUH DELAPAN SENT-END  ==  [645 frames] -66.4015 [Ac=-42828.9 LM=0.0] (Act=19.1)
 Aligning File: train/mfcc/sample10.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END MAKAN APA YANG ENAK SAMBIL NUGAS SENT-END  ==  [353 frames] -65.9657 [Ac=-23285.9 LM=0.0] (Act=16.6)
+SENT-END MAKAN APA YANG ENAK SAMBIL NUGAS SENT-END  ==  [353 frames] -66.3382 [Ac=-23417.4 LM=0.0] (Act=16.2)
 Aligning File: train/mfcc/sample11.mfc
 Created lattice with 10 nodes / 9 arcs from label file
-SENT-END HALO APAKAH SAYA BISA PESAN SATU MIE GORENG SENT-END  ==  [1172 frames] -55.3631 [Ac=-64885.5 LM=0.0] (Act=19.2)
+SENT-END HALO APAKAH SAYA BISA PESAN SATU MIE GORENG SENT-END  ==  [1172 frames] -54.2409 [Ac=-63570.3 LM=0.0] (Act=16.7)
 Aligning File: train/mfcc/sample12.mfc
 Created lattice with 9 nodes / 8 arcs from label file
-SENT-END SAYA MAU SEPULUH GORENGAN DIANTAR PAGI INI SENT-END  ==  [1049 frames] -55.2839 [Ac=-57992.8 LM=0.0] (Act=15.6)
+SENT-END SAYA MAU SEPULUH GORENGAN DIANTAR PAGI INI SENT-END  ==  [1049 frames] -54.4526 [Ac=-57120.8 LM=0.0] (Act=13.4)
 Aligning File: train/mfcc/sample13.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END SAYA PESAN ENAM NASI GORENG SENT-END  ==  [668 frames] -55.1092 [Ac=-36813.0 LM=0.0] (Act=14.5)
+SENT-END SAYA PESAN ENAM NASI GORENG SENT-END  ==  [668 frames] -54.8579 [Ac=-36645.1 LM=0.0] (Act=12.4)
 Aligning File: train/mfcc/sample14.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END APAKAH PESANAN BISA DIANTAR PAGI SENT-END  ==  [755 frames] -53.9858 [Ac=-40759.2 LM=0.0] (Act=15.8)
+SENT-END APAKAH PESANAN BISA DIANTAR PAGI SENT-END  ==  [755 frames] -53.3706 [Ac=-40294.8 LM=0.0] (Act=12.9)
 Aligning File: train/mfcc/sample15.mfc
 Created lattice with 9 nodes / 8 arcs from label file
-SENT-END SAYA MAU DUA MIE GORENG UNTUK DIAMBIL SENT-END  ==  [1004 frames] -56.5366 [Ac=-56762.7 LM=0.0] (Act=13.4)
+SENT-END SAYA MAU DUA MIE GORENG UNTUK DIAMBIL SENT-END  ==  [1004 frames] -55.3973 [Ac=-55618.9 LM=0.0] (Act=13.4)
 Aligning File: train/mfcc/sample16.mfc
 Created lattice with 6 nodes / 5 arcs from label file
-SENT-END PESAN DIAMBIL MALAM INI SENT-END  ==  [650 frames] -54.5242 [Ac=-35440.8 LM=0.0] (Act=12.4)
+SENT-END PESAN DIAMBIL MALAM INI SENT-END  ==  [650 frames] -53.9079 [Ac=-35040.1 LM=0.0] (Act=11.9)
 Aligning File: train/mfcc/sample17.mfc
 Created lattice with 10 nodes / 9 arcs from label file
-SENT-END MALAM APAKAH SAYA BISA PESAN EMPAT SUP AYAM SENT-END  ==  [1115 frames] -55.9297 [Ac=-62361.6 LM=0.0] (Act=14.3)
+SENT-END MALAM APAKAH SAYA BISA PESAN EMPAT SUP AYAM SENT-END  ==  [1115 frames] -55.8086 [Ac=-62226.6 LM=0.0] (Act=15.7)
 Aligning File: train/mfcc/sample18.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END SIANG SAYA MEMBATALKAN PESANAN MAKAN SENT-END  ==  [803 frames] -55.5950 [Ac=-44642.8 LM=0.0] (Act=16.2)
+SENT-END SIANG SAYA MEMBATALKAN PESANAN MAKAN SENT-END  ==  [803 frames] -55.0631 [Ac=-44215.7 LM=0.0] (Act=13.4)
 Aligning File: train/mfcc/sample19.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END PESANAN SORE INI UNTUK DIANTAR SENT-END  ==  [813 frames] -55.4333 [Ac=-45067.3 LM=0.0] (Act=12.7)
+SENT-END PESANAN SORE INI UNTUK DIANTAR SENT-END  ==  [813 frames] -54.5533 [Ac=-44351.8 LM=0.0] (Act=12.6)
 Aligning File: train/mfcc/sample20.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END SAYA MAU MAKAN SUP AYAM SENT-END  ==  [675 frames] -53.7758 [Ac=-36298.7 LM=0.0] (Act=16.7)
+SENT-END SAYA MAU MAKAN SUP AYAM SENT-END  ==  [675 frames] -52.8412 [Ac=-35667.8 LM=0.0] (Act=14.8)
 Aligning File: train/mfcc/sample21.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END SIANG MALAM ADA SEMBILAN AYAM SENT-END  ==  [734 frames] -65.9405 [Ac=-48400.3 LM=0.0] (Act=18.3)
+SENT-END SIANG MALAM ADA SEMBILAN AYAM SENT-END  ==  [734 frames] -66.3366 [Ac=-48691.1 LM=0.0] (Act=17.2)
 Aligning File: train/mfcc/sample22.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END INI DIANTAR UNTUK SEPULUH MALAM NANTI SENT-END  ==  [846 frames] -64.4664 [Ac=-54538.6 LM=0.0] (Act=16.2)
+SENT-END INI DIANTAR UNTUK SEPULUH MALAM NANTI SENT-END  ==  [846 frames] -64.9214 [Ac=-54923.5 LM=0.0] (Act=13.5)
 Aligning File: train/mfcc/sample23.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END DIA PESAN AYAM UNTUK DIBUAT GORENGAN SENT-END  ==  [846 frames] -65.6616 [Ac=-55549.7 LM=0.0] (Act=19.0)
+SENT-END DIA PESAN AYAM UNTUK DIBUAT GORENGAN SENT-END  ==  [846 frames] -66.5581 [Ac=-56308.2 LM=0.0] (Act=16.2)
 Aligning File: train/mfcc/sample24.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END MIE AYAM DIAMBIL SEMBILAN KALI SENT-END  ==  [670 frames] -68.9623 [Ac=-46204.7 LM=0.0] (Act=12.9)
+SENT-END MIE AYAM DIAMBIL SEMBILAN KALI SENT-END  ==  [670 frames] -69.6635 [Ac=-46674.6 LM=0.0] (Act=15.8)
 Aligning File: train/mfcc/sample25.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END SUP INI DICAMPUR NASI DAN GORENGAN SENT-END  ==  [750 frames] -68.7846 [Ac=-51588.5 LM=0.0] (Act=20.1)
+SENT-END SUP INI DICAMPUR NASI DAN GORENGAN SENT-END  ==  [750 frames] -69.4712 [Ac=-52103.4 LM=0.0] (Act=19.6)
 Aligning File: train/mfcc/sample26.mfc
 Created lattice with 11 nodes / 10 arcs from label file
-SENT-END SAYA MAKAN NASI AYAM DARI PAGI SIANG DAN SORE SENT-END  ==  [1150 frames] -66.3733 [Ac=-76329.4 LM=0.0] (Act=15.3)
+SENT-END SAYA MAKAN NASI AYAM DARI PAGI SIANG DAN SORE SENT-END  ==  [1150 frames] -65.6727 [Ac=-75523.6 LM=0.0] (Act=16.1)
 Aligning File: train/mfcc/sample27.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END LIMA TAHUN TUJUH BULAN SEPULUH HARI SENT-END  ==  [686 frames] -65.8053 [Ac=-45142.5 LM=0.0] (Act=14.6)
+SENT-END LIMA TAHUN TUJUH BULAN SEPULUH HARI SENT-END  ==  [686 frames] -66.4916 [Ac=-45613.2 LM=0.0] (Act=12.9)
 Aligning File: train/mfcc/sample28.mfc
 Created lattice with 10 nodes / 9 arcs from label file
-SENT-END DIA SUKA GORENGAN AYAM DI WARUNG LIMA ENAM SENT-END  ==  [910 frames] -64.1855 [Ac=-58408.8 LM=0.0] (Act=17.2)
+SENT-END DIA SUKA GORENGAN AYAM DI WARUNG LIMA ENAM SENT-END  ==  [910 frames] -64.7644 [Ac=-58935.6 LM=0.0] (Act=15.1)
 Aligning File: train/mfcc/sample29.mfc
 Created lattice with 10 nodes / 9 arcs from label file
-SENT-END MIE DAN GORENGAN DIAMBIL UNTUK DIANTAR MALAM INI SENT-END  ==  [910 frames] -64.7538 [Ac=-58925.9 LM=0.0] (Act=26.3)
+SENT-END MIE DAN GORENGAN DIAMBIL UNTUK DIANTAR MALAM INI SENT-END  ==  [910 frames] -65.6065 [Ac=-59701.9 LM=0.0] (Act=24.3)
 Aligning File: train/mfcc/sample30.mfc
 Created lattice with 10 nodes / 9 arcs from label file
-SENT-END DUA TIGA MAKAN NASI SUP AYAM SAMPAI PAGI SENT-END  ==  [958 frames] -65.0862 [Ac=-62352.6 LM=0.0] (Act=17.9)
+SENT-END DUA TIGA MAKAN NASI SUP AYAM SAMPAI PAGI SENT-END  ==  [958 frames] -65.8175 [Ac=-63053.1 LM=0.0] (Act=21.8)
 Aligning File: train/mfcc/sample31.mfc
 Created lattice with 9 nodes / 8 arcs from label file
-SENT-END SAYA MAU PESAN MIE AYAM MALAM INI SENT-END  ==  [565 frames] -57.3295 [Ac=-32391.2 LM=0.0] (Act=16.6)
+SENT-END SAYA MAU PESAN MIE AYAM MALAM INI SENT-END  ==  [565 frames] -57.3129 [Ac=-32381.8 LM=0.0] (Act=15.7)
 Aligning File: train/mfcc/sample32.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END PESAN MIE AYAM DUA SIANG INI SENT-END  ==  [578 frames] -55.7933 [Ac=-32248.6 LM=0.0] (Act=13.4)
+SENT-END PESAN MIE AYAM DUA SIANG INI SENT-END  ==  [578 frames] -55.5501 [Ac=-32108.0 LM=0.0] (Act=13.0)
 Aligning File: train/mfcc/sample33.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END SIANG INI INGIN MAKAN GORENGAN SENT-END  ==  [516 frames] -56.1503 [Ac=-28973.6 LM=0.0] (Act=13.6)
+SENT-END SIANG INI INGIN MAKAN GORENGAN SENT-END  ==  [516 frames] -55.4921 [Ac=-28633.9 LM=0.0] (Act=12.8)
 Aligning File: train/mfcc/sample34.mfc
 Created lattice with 10 nodes / 9 arcs from label file
-SENT-END MIE AYAM DAN GORENGAN ENAK DIMAKAN PAGI INI SENT-END  ==  [580 frames] -57.5985 [Ac=-33407.1 LM=0.0] (Act=17.0)
+SENT-END MIE AYAM DAN GORENGAN ENAK DIMAKAN PAGI INI SENT-END  ==  [580 frames] -57.1876 [Ac=-33168.8 LM=0.0] (Act=15.0)
 Aligning File: train/mfcc/sample35.mfc
 Created lattice with 9 nodes / 8 arcs from label file
-SENT-END BOLEH PESAN SUP AYAM DIAMBIL SIANG INI SENT-END  ==  [600 frames] -58.5503 [Ac=-35130.2 LM=0.0] (Act=13.9)
+SENT-END BOLEH PESAN SUP AYAM DIAMBIL SIANG INI SENT-END  ==  [600 frames] -58.4768 [Ac=-35086.1 LM=0.0] (Act=13.7)
 Aligning File: train/mfcc/sample36.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END SAYA INGIN GORENGAN LIMA SIANG INI SENT-END  ==  [572 frames] -58.1673 [Ac=-33271.7 LM=0.0] (Act=14.5)
+SENT-END SAYA INGIN GORENGAN LIMA SIANG INI SENT-END  ==  [572 frames] -58.1799 [Ac=-33278.9 LM=0.0] (Act=14.7)
 Aligning File: train/mfcc/sample37.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END TUJUH GORENGAN DAN SATU MIE GORENG SENT-END  ==  [416 frames] -58.7665 [Ac=-24446.9 LM=0.0] (Act=13.5)
+SENT-END TUJUH GORENGAN DAN SATU MIE GORENG SENT-END  ==  [416 frames] -58.3029 [Ac=-24254.0 LM=0.0] (Act=12.5)
 Aligning File: train/mfcc/sample38.mfc
 Created lattice with 9 nodes / 8 arcs from label file
-SENT-END MAKAN SUP AYAM ENAK UNTUK MALAM INI SENT-END  ==  [497 frames] -58.7349 [Ac=-29191.3 LM=0.0] (Act=17.9)
+SENT-END MAKAN SUP AYAM ENAK UNTUK MALAM INI SENT-END  ==  [497 frames] -58.4296 [Ac=-29039.5 LM=0.0] (Act=17.6)
 Aligning File: train/mfcc/sample39.mfc
 Created lattice with 9 nodes / 8 arcs from label file
-SENT-END PESAN EMPAT NASI GORENG DIANTAR MALAM INI SENT-END  ==  [610 frames] -57.3299 [Ac=-34971.2 LM=0.0] (Act=15.3)
+SENT-END PESAN EMPAT NASI GORENG DIANTAR MALAM INI SENT-END  ==  [610 frames] -57.0047 [Ac=-34772.9 LM=0.0] (Act=14.2)
 Aligning File: train/mfcc/sample40.mfc
 Created lattice with 10 nodes / 9 arcs from label file
-SENT-END PAGI INI MAKAN DUA GORENGAN DAN NASI GORENG SENT-END  ==  [644 frames] -57.0579 [Ac=-36745.3 LM=0.0] (Act=14.1)
+SENT-END PAGI INI MAKAN DUA GORENGAN DAN NASI GORENG SENT-END  ==  [644 frames] -56.5559 [Ac=-36422.0 LM=0.0] (Act=13.6)
 Aligning File: train/mfcc/sample41.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END PAGI SIANG SORE INI MALAM PAGI SENT-END  ==  [512 frames] -55.4349 [Ac=-28382.7 LM=0.0] (Act=16.0)
+SENT-END PAGI SIANG SORE INI MALAM PAGI SENT-END  ==  [512 frames] -55.5460 [Ac=-28439.6 LM=0.0] (Act=16.1)
 Aligning File: train/mfcc/sample42.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END MIE SUP UNTUK NASI AYAM SENT-END  ==  [411 frames] -55.3755 [Ac=-22759.3 LM=0.0] (Act=15.1)
+SENT-END MIE SUP UNTUK NASI AYAM SENT-END  ==  [411 frames] -55.4037 [Ac=-22770.9 LM=0.0] (Act=14.5)
 Aligning File: train/mfcc/sample43.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END DIAMBIL UNTUK DIANTAR SIANG PAGI SENT-END  ==  [525 frames] -56.7382 [Ac=-29787.6 LM=0.0] (Act=18.9)
+SENT-END DIAMBIL UNTUK DIANTAR SIANG PAGI SENT-END  ==  [525 frames] -56.6497 [Ac=-29741.1 LM=0.0] (Act=17.8)
 Aligning File: train/mfcc/sample44.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END DIANTAR INI MALAM MAKAN MIE AYAM SENT-END  ==  [528 frames] -55.8459 [Ac=-29486.6 LM=0.0] (Act=18.4)
+SENT-END DIANTAR INI MALAM MAKAN MIE AYAM SENT-END  ==  [528 frames] -55.9619 [Ac=-29547.9 LM=0.0] (Act=18.3)
 Aligning File: train/mfcc/sample45.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END AYAM GORENGAN TUJUH LIMA EMPAT SENT-END  ==  [456 frames] -55.6594 [Ac=-25380.7 LM=0.0] (Act=15.5)
+SENT-END AYAM GORENGAN TUJUH LIMA EMPAT SENT-END  ==  [456 frames] -55.6580 [Ac=-25380.1 LM=0.0] (Act=14.4)
 Aligning File: train/mfcc/sample46.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END SEMBILAN SEPULUH SATU TIGA EMPAT SENT-END  ==  [461 frames] -57.1683 [Ac=-26354.6 LM=0.0] (Act=17.8)
+SENT-END SEMBILAN SEPULUH SATU TIGA EMPAT SENT-END  ==  [461 frames] -57.0467 [Ac=-26298.5 LM=0.0] (Act=14.3)
 Aligning File: train/mfcc/sample47.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END GORENGAN AYAM DUA LIMA UNTUK DIAMBIL SENT-END  ==  [509 frames] -57.1739 [Ac=-29101.5 LM=0.0] (Act=16.7)
+SENT-END GORENGAN AYAM DUA LIMA UNTUK DIAMBIL SENT-END  ==  [509 frames] -56.9019 [Ac=-28963.1 LM=0.0] (Act=15.6)
 Aligning File: train/mfcc/sample48.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END SEMBILAN MIE AYAM DAN GORENGAN SENT-END  ==  [335 frames] -57.0461 [Ac=-19110.4 LM=0.0] (Act=18.6)
+SENT-END SEMBILAN MIE AYAM DAN GORENGAN SENT-END  ==  [335 frames] -57.1162 [Ac=-19133.9 LM=0.0] (Act=15.8)
 Aligning File: train/mfcc/sample49.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END UNTUK SORE INI DIANTAR DAN DIAMBIL SENT-END  ==  [395 frames] -58.5374 [Ac=-23122.3 LM=0.0] (Act=20.5)
+SENT-END UNTUK SORE INI DIANTAR DAN DIAMBIL SENT-END  ==  [395 frames] -58.2985 [Ac=-23027.9 LM=0.0] (Act=19.1)
 Aligning File: train/mfcc/sample50.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END AMBIL GORENGAN UNTUK DIAMBIL SIANG SENT-END  ==  [383 frames] -55.5927 [Ac=-21292.0 LM=0.0] (Act=18.1)
+SENT-END AMBIL GORENGAN UNTUK DIAMBIL SIANG SENT-END  ==  [383 frames] -55.6474 [Ac=-21313.0 LM=0.0] (Act=17.8)
 Aligning File: train/mfcc/sample51.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END SIANG MALAM MAKAN SUP MIE SENT-END  ==  [365 frames] -55.2718 [Ac=-20174.2 LM=0.0] (Act=19.1)
+SENT-END SIANG MALAM MAKAN SUP MIE SENT-END  ==  [365 frames] -55.3514 [Ac=-20203.3 LM=0.0] (Act=17.6)
 Aligning File: train/mfcc/sample52.mfc
 Created lattice with 9 nodes / 8 arcs from label file
-SENT-END PESAN SEMBILAN NASI MIE UNTUK DIAMBIL SIANG SENT-END  ==  [504 frames] -56.7897 [Ac=-28622.0 LM=0.0] (Act=16.5)
+SENT-END PESAN SEMBILAN NASI MIE UNTUK DIAMBIL SIANG SENT-END  ==  [504 frames] -56.9056 [Ac=-28680.4 LM=0.0] (Act=16.5)
 Aligning File: train/mfcc/sample53.mfc
 Created lattice with 8 nodes / 7 arcs from label file
-SENT-END SIANG UNTUK MIE GORENGAN HALO HARI SENT-END  ==  [521 frames] -54.3255 [Ac=-28303.6 LM=0.0] (Act=16.3)
+SENT-END SIANG UNTUK MIE GORENGAN HALO HARI SENT-END  ==  [521 frames] -54.4058 [Ac=-28345.4 LM=0.0] (Act=15.9)
 Aligning File: train/mfcc/sample54.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END BULAN SORE HARI SIANG DIANTAR SENT-END  ==  [489 frames] -55.7670 [Ac=-27270.1 LM=0.0] (Act=14.1)
+SENT-END BULAN SORE HARI SIANG DIANTAR SENT-END  ==  [489 frames] -55.7101 [Ac=-27242.2 LM=0.0] (Act=12.9)
 Aligning File: train/mfcc/sample55.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END DIBUAT DIANTAR DICAMPUR DIAMBIL SIANG SENT-END  ==  [504 frames] -57.8889 [Ac=-29176.0 LM=0.0] (Act=17.5)
+SENT-END DIBUAT DIANTAR DICAMPUR DIAMBIL SIANG SENT-END  ==  [504 frames] -58.0350 [Ac=-29249.6 LM=0.0] (Act=16.2)
 Aligning File: train/mfcc/sample56.mfc
 Created lattice with 7 nodes / 6 arcs from label file
-SENT-END MAKAN LIMA AYAM GORENG ENAK SENT-END  ==  [543 frames] -55.1970 [Ac=-29972.0 LM=0.0] (Act=16.6)
+SENT-END MAKAN LIMA AYAM GORENG ENAK SENT-END  ==  [543 frames] -55.3500 [Ac=-30055.0 LM=0.0] (Act=15.1)
 Aligning File: train/mfcc/sample57.mfc
 Created lattice with 9 nodes / 8 arcs from label file
-SENT-END MIE SUP MIE SUP AYAM GORENGAN HARI SENT-END  ==  [662 frames] -54.5994 [Ac=-36144.8 LM=0.0] (Act=18.8)
+SENT-END MIE SUP MIE SUP AYAM GORENGAN HARI SENT-END  ==  [662 frames] -54.9766 [Ac=-36394.5 LM=0.0] (Act=18.9)
+Aligning File: train/mfcc/sample58.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END PESAN UNTUK MALAM INI YA SENT-END  ==  [554 frames] -54.3094 [Ac=-30087.4 LM=0.0] (Act=14.1)
+Aligning File: train/mfcc/sample59.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END SAYA PESAN TUJUH AYAM GORENG SENT-END  ==  [528 frames] -55.3520 [Ac=-29225.9 LM=0.0] (Act=11.8)
+Aligning File: train/mfcc/sample60.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+SENT-END PESAN NASI DIAMBIL MALAM SENT-END  ==  [410 frames] -56.7534 [Ac=-23268.9 LM=0.0] (Act=13.5)
+Aligning File: train/mfcc/sample61.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+SENT-END SAYA PESAN UNTUK PAGI SENT-END  ==  [383 frames] -55.3719 [Ac=-21207.5 LM=0.0] (Act=12.5)
+Aligning File: train/mfcc/sample62.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END BISA UNTUK DIANTAR SORE BESOK SENT-END  ==  [477 frames] -56.9716 [Ac=-27175.5 LM=0.0] (Act=15.1)
+Aligning File: train/mfcc/sample63.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END SAYA MAU SEPULUH MIE AYAM SENT-END  ==  [500 frames] -56.6006 [Ac=-28300.3 LM=0.0] (Act=15.6)
+Aligning File: train/mfcc/sample64.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END DELAPAN MIE UNTUK DIAMBIL NANTI SENT-END  ==  [530 frames] -56.5061 [Ac=-29948.2 LM=0.0] (Act=16.4)
+Aligning File: train/mfcc/sample65.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END PESAN MIE GORENG UNTUK DIANTAR SENT-END  ==  [542 frames] -54.6316 [Ac=-29610.3 LM=0.0] (Act=14.2)
+Aligning File: train/mfcc/sample66.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END MALAM MAU PESAN NASI AYAM SENT-END  ==  [510 frames] -57.4025 [Ac=-29275.3 LM=0.0] (Act=13.5)
+Aligning File: train/mfcc/sample67.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END MAU PESAN MIE UNTUK SORE SENT-END  ==  [453 frames] -55.0913 [Ac=-24956.3 LM=0.0] (Act=13.5)
 
 HTK Configuration Parameters[10]
   Module/Tool     Parameter                  Value
