@@ -1,4 +1,5 @@
 ADA             aa+d aa-d+aa d-aa sp
+AMBIL           aa+m aa-m+b m-b+ih b-ih+l ih-l sp
 ANTAR           aa+n aa-n+t n-t+aa t-aa+r aa-r sp
 APA             aa+p aa-p+aa p-aa sp
 APAKAH          aa+p aa-p+aa p-aa+k aa-k+aa k-aa+hh aa-hh sp
@@ -46,6 +47,8 @@ SAMPAI          s+aa s-aa+m aa-m+p m-p+aa p-aa+ih aa-ih sp
 SATU            s+aa s-aa+t aa-t+uw t-uw sp
 SAYA            s+aa s-aa+y aa-y+aa y-aa sp
 SEMBILAN        s+eh s-eh+m eh-m+b m-b+ih b-ih+l ih-l+aa l-aa+n aa-n sp
+SENT-END        sil
+SENT-START      sil
 SEPULUH         s+eh s-eh+p eh-p+uw p-uw+l uw-l+uw l-uw+hh uw-hh sp
 SIANG           s+ih s-ih+y ih-y+aa y-aa+ng aa-ng sp
 SORE            s+ao s-ao+r ao-r+eh r-eh sp

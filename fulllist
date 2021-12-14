@@ -2,6 +2,11 @@ aa+d
 aa-d+aa
 d-aa
 sp
+aa+m
+aa-m+b
+m-b+ih
+b-ih+l
+ih-l
 aa+n
 aa-n+t
 n-t+aa
@@ -47,10 +52,6 @@ d-ih
 d-ih+aa
 ih-aa
 ih-aa+m
-aa-m+b
-m-b+ih
-b-ih+l
-ih-l
 ih-aa+n
 d-ih+b
 ih-b+uw
@@ -164,6 +165,7 @@ y-aa
 s+eh
 s-eh+m
 ih-l+aa
+sil
 s-eh+p
 eh-p+uw
 uw-l+uw
@@ -208,6 +210,10 @@ uw-ng
 y+aa
 aa
 d
+m
+b
+ih
+l
 n
 t
 r
@@ -215,12 +221,8 @@ p
 k
 hh
 y
-m
-b
-ih
 s
 ao
-l
 eh
 uw
 c
@@ -230,4 +232,3 @@ ng
 h
 oh
 j
-sil

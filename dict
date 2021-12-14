@@ -1,4 +1,5 @@
 ADA             [ADA]           aa d aa sp
+AMBIL           [AMBIL]         aa m b ih l sp
 ANTAR           [ANTAR]         aa n t aa r sp
 APA             [APA]           aa p aa sp
 APAKAH          [APAKAH]        aa p aa k aa hh sp
@@ -46,6 +47,8 @@ SAMPAI          [SAMPAI]        s aa m p aa ih sp
 SATU            [SATU]          s aa t uw sp
 SAYA            [SAYA]          s aa y aa sp
 SEMBILAN        [SEMBILAN]      s eh m b ih l aa n sp
+SENT-END        []              sil
+SENT-START      []              sil
 SEPULUH         [SEPULUH]       s eh p uw l uw hh sp
 SIANG           [SIANG]         s ih y aa ng sp
 SORE            [SORE]          s ao r eh sp
@@ -57,5 +60,3 @@ TUJUH           [TUJUH]         t uw j uw hh sp
 UNTUK           [UNTUK]         uw n t uw k sp
 WARUNG          [WARUNG]        w aa r uw ng sp
 YANG            [YANG]          y aa ng sp
-SENT-END        []              sil
-SENT-START      []              sil
