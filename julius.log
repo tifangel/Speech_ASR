@@ -1,3 +1,5 @@
+WARNING: m_chkparam: "-penalty1" only for grammar, ignored
+WARNING: m_chkparam: "-penalty2" only for grammar, ignored
 STAT: jconf successfully finalized
 STAT: *** loading AM00 _default
 Stat: init_phmm: Reading in HMM definition
@@ -17,15 +19,22 @@ STAT: making pseudo bi/mono-phone for IW-triphone
 Stat: hmm_lookup: 119 pseudo phones are added to logical HMM list
 STAT: *** AM00 _default loaded
 STAT: *** loading LM00 _default
-STAT: reading [sample.dfa] and [sample.dict]...
-Stat: init_voca: read 26 words
-STAT: done
-STAT: Gram #0 sample registered
-STAT: Gram #0 sample: new grammar loaded, now mash it up for recognition
-STAT: Gram #0 sample: extracting category-pair constraint for the 1st pass
-STAT: Gram #0 sample: installed
-STAT: Gram #0 sample: turn on active
-STAT: grammar update completed
+Stat: init_voca: read 25 words
+Stat: init_ngram: reading in ARPA forward n-gram from gram.1/trigram.arpa
+Stat: ngram_read_arpa: this is 3-gram file
+Stat: ngram_read_arpa: reading 1-gram part...
+Stat: ngram_read_arpa: read 25 1-gram entries
+Stat: ngram_read_arpa: reading 2-gram part...
+Stat: ngram_read_arpa: 2-gram read 0 (0%)
+Stat: ngram_read_arpa: 2-gram read 97 end
+Stat: ngram_read_arpa: reading 3-gram part...
+Stat: ngram_read_arpa: 3-gram read 0 (0%)
+Stat: ngram_read_arpa: 3-gram read 164 end
+Stat: ngram_compact_context: 2-gram has full bo_wt, compaction disabled
+Stat: init_ngram: neither "<unk>" nor "<UNK>" was found, assuming close vocabulary LM
+Stat: init_ngram: finished reading n-gram
+Stat: init_ngram: mapping dictonary words to n-gram entries
+Stat: init_ngram: finished word-to-ngram mapping
 STAT: *** LM00 _default loaded
 STAT: ------
 STAT: All models are ready, go for final fusion
@@ -33,10 +42,11 @@ STAT: [1] create MFCC extraction instance(s)
 STAT: [2] create recognition processing instance(s) with AM and LM
 STAT: composing recognizer instance SR00 _default (AM00 _default, LM00 _default)
 STAT: Building HMM lexicon tree
-STAT: lexicon size: 424 nodes
+STAT: lexicon size: 423 nodes
 STAT: coordination check passed
-STAT: multi-gram: beam width set to 200 (guess) by lexicon change
-STAT: wchmm (re)build completed
+STAT: make successor lists for unigram factoring
+STAT: done
+STAT:  1-gram factoring values has been pre-computed
 STAT: SR00 _default composed
 STAT: [3] initialize for acoustic HMM calculation
 Stat: outprob_init: state-level mixture PDFs, use calc_mix()
@@ -66,9 +76,8 @@ Configuration of Modules
 
  Language Model:
  - LM00 "_default"
-	grammar #1:
-	    dfa  = sample.dfa
-	    dict = sample.dict
+	vocabulary filename=samplengram.dict
+	forward n-gram filename=gram.1/trigram.arpa
 
  Recognizer:
  - SR00 "_default" (AM00, LM00)
@@ -103,21 +112,27 @@ Acoustic Model(s)
 ------------------------------------------------------------
 Language Model(s)
 
-[LM00 "_default"] type=grammar
+[LM00 "_default"] type=n-gram
 
- DFA grammar info:
-      13 nodes, 16 arcs, 8 terminal(category) symbols
-      category-pair matrix: 52 bytes (896 bytes allocated)
+ N-gram info:
+	            spec = 3-gram, forward (left-to-right)
+	        OOV word = none (assume close vocabulary)
+	    wordset size = 25
+	  1-gram entries =         25  (  0.0 MB)
+	  2-gram entries =         97  (  0.0 MB)
+	  3-gram entries =        164  (  0.0 MB)
+	           pass1 = 2-gram in the forward n-gram
 
  Vocabulary Info:
-        vocabulary size  = 26 words, 119 models
-        average word len = 4.6 models, 13.7 states
+        vocabulary size  = 25 words, 116 models
+        average word len = 4.6 models, 13.9 states
        maximum state num = 24 nodes per word
        transparent words = not exist
        words under class = not exist
 
  Parameters:
-   found sp category IDs =
+	(-silhead)head sil word = 0: "<s> @0.000000 [<s>] sil(sil)"
+	(-siltail)tail sil word = 1: "</s> @0.000000 [</s>] sil(sil)"
 
 ------------------------------------------------------------
 Recognizer(s)
@@ -125,12 +140,19 @@ Recognizer(s)
 [SR00 "_default"]  AM00 "_default"  +  LM00 "_default"
 
  Lexicon tree:
-	 total node num =    424
-	  root node num =     24
-	  leaf node num =     26
+	 total node num =    423
+	  root node num =     25
+	(23 hi-freq. words are separated from tree lexicon)
+	  leaf node num =     25
+	 fact. node num =     25
 
-	(-penalty1) IW penalty1 = +5.0
-	(-penalty2) IW penalty2 = +20.0
+ Inter-word N-gram cache: 
+	root node to be cached = 25 / 25 (isolated only)
+	word ends to be cached = 25 (all)
+	  max. allocation size = 0MB
+	(-lmp)  pass1 LM weight = 8.0  ins. penalty = -2.0
+	(-lmp2) pass2 LM weight = 8.0  ins. penalty = -2.0
+	(-transp)trans. penalty = +0.0 per word
 	(-cmalpha)CM alpha coef = 0.050000
 
 	 inter-word short pause = on (append "sp" for each word tail)
@@ -151,9 +173,7 @@ Recognizer(s)
 	 IWCD handling:
 	   1st pass: approximation (use max. prob. of same LC)
 	   2nd pass: loose (apply when hypo. is popped and scanned)
-	 all possible words will be expanded in 2nd pass
-	 build_wchmm2() used
-	 lcdset limited by word-pair constraint
+	 factoring score: 1-gram prob. (statically assigned beforehand)
 	short pause segmentation = off
 	fall back on search fail = off, returns search failure
 
@@ -170,7 +190,7 @@ FrontEnd:
  Input stream:
 	             input type = feature vector sequence
 	           input source = feature vector file (HTK format)
-	                filelist = test.scp
+	                filelist = train.scp
 	   zero frames stripping = on
 	      reject short input = off
 	      reject  long input = off
@@ -180,6 +200,8 @@ FrontEnd:
 Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
 Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
 Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
 Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
 Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
 Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
@@ -204,3 +226,299 @@ Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
 Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
 Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
 Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Stat: strip_mfcc: absolute energy coef. not exist, stripping disabled
+Warning: paramselect: can do only parameter exclusion. qualifiers _Z ignored
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
