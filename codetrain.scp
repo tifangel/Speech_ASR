@@ -77,3 +77,13 @@
 ./train/wav/sample77.wav ./train/mfcc/sample77.mfc
 ./train/wav/sample78.wav ./train/mfcc/sample78.mfc
 ./train/wav/sample79.wav ./train/mfcc/sample79.mfc
+./train/wav/sample80.wav ./train/mfcc/sample80.mfc
+./train/wav/sample81.wav ./train/mfcc/sample81.mfc
+./train/wav/sample82.wav ./train/mfcc/sample82.mfc
+./train/wav/sample83.wav ./train/mfcc/sample83.mfc
+./train/wav/sample84.wav ./train/mfcc/sample84.mfc
+./train/wav/sample85.wav ./train/mfcc/sample85.mfc
+./train/wav/sample86.wav ./train/mfcc/sample86.mfc
+./train/wav/sample87.wav ./train/mfcc/sample87.mfc
+./train/wav/sample88.wav ./train/mfcc/sample88.mfc
+./train/wav/sample89.wav ./train/mfcc/sample89.mfc
