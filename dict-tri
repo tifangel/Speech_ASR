@@ -4,10 +4,12 @@ ANTAR           aa+n aa-n+t n-t+aa t-aa+r aa-r sp
 APA             aa+p aa-p+aa p-aa sp
 APAKAH          aa+p aa-p+aa p-aa+k aa-k+aa k-aa+hh aa-hh sp
 AYAM            aa+y aa-y+aa y-aa+m aa-m sp
+BAYAR           b+aa b-aa+y aa-y+aa y-aa+r aa-r sp
 BESOK           b+eh b-eh+s eh-s+o s-o+k o-k sp
 BISA            b+ih b-ih+s ih-s+aa s-aa sp
 BOLEH           b+ao b-ao+l ao-l+eh l-eh+hh eh-hh sp
 BULAN           b+uw b-uw+l uw-l+aa l-aa+n aa-n sp
+CEPAT           c+eh c-eh+p eh-p+aa p-aa+t aa-t sp
 DAN             d+aa d-aa+n aa-n sp
 DARI            d+aa d-aa+r aa-r+ih r-ih sp
 DELAPAN         d+eh d-eh+l eh-l+aa l-aa+p aa-p+aa p-aa+n aa-n sp
@@ -45,6 +47,7 @@ PESANAN         p+eh p-eh+s eh-s+aa s-aa+n aa-n+aa n-aa+n aa-n sp
 PULANG          p+uw p-uw+l uw-l+aa l-aa+ng aa-ng sp
 SAMBIL          s+aa s-aa+m aa-m+b m-b+ih b-ih+l ih-l sp
 SAMPAI          s+aa s-aa+m aa-m+p m-p+aa p-aa+ih aa-ih sp
+SARAPAN         s+aa s-aa+r aa-r+aa r-aa+p aa-p+aa p-aa+n aa-n sp
 SATU            s+aa s-aa+t aa-t+uw t-uw sp
 SAYA            s+aa s-aa+y aa-y+aa y-aa sp
 SEMBILAN        s+eh s-eh+m eh-m+b m-b+ih b-ih+l ih-l+aa l-aa+n aa-n sp
@@ -58,6 +61,7 @@ SUP             s+uw s-uw+p uw-p sp
 TAHUN           t+aa t-aa+hh aa-hh+uw hh-uw+n uw-n sp
 TIGA            t+ih t-ih+g ih-g+aa g-aa sp
 TUJUH           t+uw t-uw+j uw-j+uw j-uw+hh uw-hh sp
+TUNAI           t+uw t-uw+n uw-n+aa n-aa+ih aa-ih sp
 UNTUK           uw+n uw-n+t n-t+uw t-uw+k uw-k sp
 WARUNG          w+aa w-aa+r aa-r+uw r-uw+ng uw-ng sp
 YA              y+aa y-aa sp

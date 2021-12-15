@@ -1,18 +1,17 @@
-ADA             [ADA]           aa d aa sp
 AMBIL           [AMBIL]         aa m b ih l sp
 ANTAR           [ANTAR]         aa n t aa r sp
 APA             [APA]           aa p aa sp
 APAKAH          [APAKAH]        aa p aa k aa hh sp
 AYAM            [AYAM]          aa y aa m sp
+BAYAR           [BAYAR]         b aa y aa r sp
 BESOK           [BESOK]         b eh s o k sp
 BISA            [BISA]          b ih s aa sp
-BOLEH           [BOLEH]         b ao l eh hh sp
 BULAN           [BULAN]         b uw l aa n sp
+CEPAT           [CEPAT]         c eh p aa t sp
 DAN             [DAN]           d aa n sp
 DARI            [DARI]          d aa r ih sp
 DELAPAN         [DELAPAN]       d eh l aa p aa n sp
 DI              [DI]            d ih sp
-DIA             [DIA]           d ih aa sp
 DIAMBIL         [DIAMBIL]       d ih aa m b ih l sp
 DIANTAR         [DIANTAR]       d ih aa n t aa r sp
 DIBUAT          [DIBUAT]        d ih b uw aa t sp
@@ -45,6 +44,7 @@ PESANAN         [PESANAN]       p eh s aa n aa n sp
 PULANG          [PULANG]        p uw l aa ng sp
 SAMBIL          [SAMBIL]        s aa m b ih l sp
 SAMPAI          [SAMPAI]        s aa m p aa ih sp
+SARAPAN         [SARAPAN]       s aa r aa p aa n sp
 SATU            [SATU]          s aa t uw sp
 SAYA            [SAYA]          s aa y aa sp
 SEMBILAN        [SEMBILAN]      s eh m b ih l aa n sp
@@ -53,11 +53,10 @@ SENT-START      []              sil
 SEPULUH         [SEPULUH]       s eh p uw l uw hh sp
 SIANG           [SIANG]         s ih y aa ng sp
 SORE            [SORE]          s ao r eh sp
-SUKA            [SUKA]          s uw k aa sp
 SUP             [SUP]           s uw p sp
-TAHUN           [TAHUN]         t aa hh uw n sp
 TIGA            [TIGA]          t ih g aa sp
 TUJUH           [TUJUH]         t uw j uw hh sp
+TUNAI           [TUNAI]         t uw n aa ih sp
 UNTUK           [UNTUK]         uw n t uw k sp
 WARUNG          [WARUNG]        w aa r uw ng sp
 YA              [YA]            y aa sp
